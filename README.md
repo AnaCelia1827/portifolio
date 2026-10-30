@@ -36,6 +36,7 @@ O endereço de Fibrac foi mantido conforme enviado, embora tenha retornado 404 n
 
 | Uso               | Cor       |
 | ----------------- | --------- |
+| Fundo principal   | `#FFFFFF` |
 | Papel             | `#E3D9DA` |
 | Roxo              | `#71557B` |
 | Texto             | `#3A335C` |

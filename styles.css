@@ -35,6 +35,7 @@
 }
 
 :root {
+  --background: #ffffff;
   --paper: #e3d9da;
   --purple: #71557b;
   --ink: #3a335c;
@@ -52,11 +53,11 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 32px;
-  scrollbar-color: var(--purple) var(--paper);
+  scrollbar-color: var(--purple) var(--background);
 }
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--background);
   color: var(--ink);
   font-family: var(--body);
   font-size: 16px;
