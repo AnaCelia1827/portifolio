@@ -2,7 +2,7 @@
 
 Portfólio responsivo em HTML, CSS e JavaScript puro, baseado no [Figma original](https://www.figma.com/design/agGHXsc44J2MNHlsuX9s6g/Sem-t%C3%ADtulo?node-id=7-178).
 
-A identidade mantém as fontes **Unbounded** e **Poppins**, a paleta do Figma e suas fotos e logos. Os cartões inclinados e o arquivo com abas incorporam as referências enviadas.
+A identidade mantém as fontes **Unbounded** e **Poppins**, as fotos e os logos do Figma. A paleta combina azul-marinho, rosa e branco, com pequenos destaques em amarelo-limão, conforme a referência escolhida. Os cartões inclinados e o arquivo com abas incorporam as referências enviadas.
 
 ## Como abrir
 
@@ -34,12 +34,12 @@ O endereço de Fibrac foi mantido conforme enviado, embora tenha retornado 404 n
 
 ## Cores
 
-| Uso               | Cor       |
-| ----------------- | --------- |
-| Fundo principal   | `#FFFFFF` |
-| Papel             | `#E3D9DA` |
-| Roxo              | `#71557B` |
-| Texto             | `#3A335C` |
-| Rosa das estrelas | `#DEAFC3` |
+| Uso              | Cor       |
+| ---------------- | --------- |
+| Fundo principal  | `#FFFFFF` |
+| Superfície clara | `#F5F5F8` |
+| Azul-marinho     | `#0B0B5C` |
+| Rosa             | `#F34B9B` |
+| Amarelo-limão    | `#D7EB00` |
 
 As imagens foram baixadas dos endereços de exportação do Figma; nenhum link temporário é usado em tempo de execução. As fontes são distribuídas sob a licença SIL Open Font License, incluída em `assets/fonts/`.
