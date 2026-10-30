@@ -2,7 +2,7 @@
 
 Portfólio responsivo em HTML, CSS e JavaScript puro, baseado no [Figma original](https://www.figma.com/design/agGHXsc44J2MNHlsuX9s6g/Sem-t%C3%ADtulo?node-id=7-178).
 
-A identidade mantém as fontes **Unbounded** e **Poppins**, as fotos e os logos do Figma. A paleta combina azul-marinho, rosa e branco, com pequenos destaques em amarelo-limão, conforme a referência escolhida. Os cartões inclinados e o arquivo com abas incorporam as referências enviadas.
+A identidade usa **Poppins** em todo o site, seguindo a fonte do menu da referência, com pesos regular, médio e seminegrito. As fotos e os logos vêm do Figma. A paleta combina azul-marinho, rosa e branco, com destaques em amarelo-limão, conforme a referência escolhida. Os cartões inclinados e o arquivo com abas incorporam as referências enviadas.
 
 ## Como abrir
 
@@ -27,6 +27,8 @@ O site estará em `http://localhost:4173`.
 ## Comportamento
 
 As abas aceitam clique, setas do teclado, Home e End. Os detalhes dos projetos abrem com foco contido e podem ser fechados por Escape, pelo botão ou clicando fora. Sem JavaScript, todas as pastas permanecem visíveis. O site respeita a preferência por movimento reduzido.
+
+As abas ficam encaixadas em um único corpo de pasta, sem recortes sobrepostos. A troca de pasta anima a cor de fundo, a altura do conteúdo e a entrada do painel. Cliques rápidos interrompem a animação anterior sem deixar alturas fixas ou painéis sobrepostos.
 
 A aba da seção Sobre mim sobrepõe a base da polaroid, criando o efeito de foto saindo da pasta. A foto e o clipe entram juntos, com um movimento suave ao passar o mouse. As seções aparecem durante a rolagem e os cartões entram em sequência. As animações são desativadas com a preferência por movimento reduzido, inclusive quando ela muda com a página aberta.
 

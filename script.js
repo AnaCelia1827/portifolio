@@ -1,6 +1,20 @@
 const folderTabs = [...document.querySelectorAll(".folder-tab")];
 const folderPanels = [...document.querySelectorAll(".folder-panel")];
 const tablist = document.querySelector(".folder-tabs");
+const folder = document.querySelector(".folder");
+const folderBody = document.querySelector(".folder-body");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+let activeFolder = -1;
+let folderHeightAnimation;
+let panelAnimation;
+
+function stopFolderTransition() {
+  folderHeightAnimation?.cancel();
+  panelAnimation?.cancel();
+  folderHeightAnimation = undefined;
+  panelAnimation = undefined;
+  folderBody.style.height = "";
+}
 
 // Sem JavaScript, as abas continuam sendo âncoras e todas as pastas ficam visíveis.
 tablist.setAttribute("role", "tablist");
@@ -12,14 +26,55 @@ folderTabs.forEach((tab, index) => {
 });
 
 function selectFolder(index, focus = false) {
+  if (index === activeFolder) {
+    if (focus) folderTabs[index].focus();
+    return;
+  }
+  const previousHeight = folderBody.getBoundingClientRect().height;
+  const shouldAnimate = activeFolder !== -1 && !reducedMotion.matches;
+  stopFolderTransition();
+
   folderTabs.forEach((tab, current) => {
     const selected = index === current;
     tab.setAttribute("aria-selected", String(selected));
     tab.tabIndex = selected ? 0 : -1;
     folderPanels[current].hidden = !selected;
   });
+  activeFolder = index;
+  folder.dataset.active = String(index);
+
+  if (shouldAnimate) {
+    const nextPanel = folderPanels[index];
+    const nextHeight = nextPanel.getBoundingClientRect().height;
+    folderBody.style.height = `${previousHeight}px`;
+    const animation = folderBody.animate(
+      [{ height: `${previousHeight}px` }, { height: `${nextHeight}px` }],
+      { duration: 460, easing: "cubic-bezier(.22, 1, .36, 1)", fill: "both" },
+    );
+    folderHeightAnimation = animation;
+    animation.finished
+      .then(() => {
+        if (folderHeightAnimation !== animation) return;
+        folderBody.style.height = "";
+        folderHeightAnimation = undefined;
+        animation.cancel();
+      })
+      .catch(() => {});
+    panelAnimation = nextPanel.animate(
+      [
+        { opacity: 0, transform: "translateY(14px)" },
+        { opacity: 1, transform: "translateY(0)" },
+      ],
+      { duration: 360, easing: "cubic-bezier(.22, 1, .36, 1)" },
+    );
+  }
   if (focus) folderTabs[index].focus();
 }
+
+window.addEventListener("resize", stopFolderTransition);
+reducedMotion.addEventListener("change", (event) => {
+  if (event.matches) stopFolderTransition();
+});
 
 function folderFromHash() {
   const index = folderPanels.findIndex(
@@ -144,7 +199,6 @@ dialog.addEventListener("click", (event) => {
 dialog.addEventListener("close", () => projectTrigger?.focus());
 
 // A animação usa translate para preservar a inclinação própria de cada cartão.
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 if (!reducedMotion.matches && "IntersectionObserver" in window) {
   const revealTargets = document.querySelectorAll(
     ".about-heading, .about-copy, .section-heading, .skill-card, .archive-intro, .folder, .contact-top, .email-link",
