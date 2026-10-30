@@ -351,6 +351,10 @@ h1 {
   transform: rotate(4deg);
   box-shadow: 3px 8px 15px #0b0b5c24;
   position: relative;
+  animation: polaroid-emerge 1.35s var(--ease) 0.12s backwards;
+  transition:
+    transform 0.65s var(--ease),
+    box-shadow 0.65s var(--ease);
 }
 .portrait-crop {
   position: relative;
@@ -387,6 +391,8 @@ h1 {
   height: auto;
   transform: rotate(3deg);
   pointer-events: none;
+  animation: clip-emerge 1.35s var(--ease) 0.12s backwards;
+  transition: transform 0.65s var(--ease);
 }
 .photo-label {
   font-size: 11px;
@@ -396,6 +402,7 @@ h1 {
   transform: rotate(-7deg);
   border-bottom: 1px solid var(--navy);
   padding-bottom: 4px;
+  animation: portrait-note-in 0.8s var(--ease) 0.7s backwards;
 }
 .photo-sticker {
   position: absolute;
@@ -413,6 +420,8 @@ h1 {
   border: 1px dashed var(--navy);
   outline: 6px solid var(--pink);
   font-family: var(--display);
+  animation: portrait-note-in 0.8s var(--ease) 0.8s backwards;
+  transition: transform 0.65s var(--ease);
 }
 .scroll-cue {
   position: absolute;
@@ -428,9 +437,11 @@ h1 {
 .scroll-cue .icon {
   width: 17px;
   height: 17px;
+  animation: scroll-nudge 2s var(--ease) 1.5s 3;
 }
 .about {
   position: relative;
+  z-index: 4;
   background: var(--navy);
   color: var(--white);
   margin-top: 25px;
@@ -440,14 +451,17 @@ h1 {
   content: "";
   position: absolute;
   right: 0;
-  top: -49px;
+  top: -185px;
   width: 40%;
-  height: 50px;
+  height: 186px;
   background: var(--navy);
   border-radius: 50px 0 0 0;
-  z-index: -1;
+  z-index: 0;
+  box-shadow: 0 -8px 22px #0b0b5c0b;
 }
 .about-inner {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 0.8fr 1.6fr;
   gap: 70px;
@@ -1913,7 +1927,104 @@ h1 {
     aspect-ratio: 447/373;
   }
 }
+/* A aba fica à frente da base da foto, como a boca de uma pasta. */
+.photo-sticker {
+  bottom: 90px;
+}
+@media (max-width: 900px) {
+  .photo-sticker {
+    bottom: 85px;
+  }
+}
+@media (max-width: 650px) {
+  .about::before {
+    top: -160px;
+    height: 161px;
+    width: min(calc(100% - 20px), calc(50% + 155px));
+    border-radius: 32px 0 0 0;
+  }
+  .photo-sticker {
+    bottom: 80px;
+  }
+  .scroll-cue {
+    left: max(22px, calc(50% - 133px));
+    bottom: 27px;
+    z-index: 5;
+    color: var(--white);
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .portrait-scene:hover .polaroid {
+    transform: translateY(-12px) rotate(2deg);
+    box-shadow: 4px 14px 24px #0b0b5c26;
+  }
+  .portrait-scene:hover .paperclip {
+    transform: translateY(-12px) rotate(1deg);
+  }
+  .portrait-scene:hover .photo-sticker {
+    transform: translateY(-5px) rotate(-7deg);
+  }
+}
+.reveal-pending {
+  opacity: 0;
+  translate: 0 24px;
+  transition:
+    opacity 0.75s var(--ease),
+    translate 0.75s var(--ease),
+    transform 0.4s var(--ease);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal-pending.is-revealed {
+  opacity: 1;
+  translate: 0 0;
+}
+@keyframes polaroid-emerge {
+  from {
+    transform: translateY(145px) rotate(-3deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+  to {
+    transform: translateY(0) rotate(4deg);
+  }
+}
+@keyframes clip-emerge {
+  from {
+    transform: translateY(145px) rotate(-4deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(4deg);
+  }
+  to {
+    transform: translateY(0) rotate(3deg);
+  }
+}
+@keyframes portrait-note-in {
+  from {
+    opacity: 0;
+    translate: 0 18px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes scroll-nudge {
+  0%,
+  55%,
+  100% {
+    translate: 0 0;
+  }
+  30% {
+    translate: 0 5px;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
+  .reveal-pending {
+    opacity: 1;
+    translate: none;
+  }
   html {
     scroll-behavior: auto;
   }

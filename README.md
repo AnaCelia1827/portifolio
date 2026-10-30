@@ -28,6 +28,8 @@ O site estará em `http://localhost:4173`.
 
 As abas aceitam clique, setas do teclado, Home e End. Os detalhes dos projetos abrem com foco contido e podem ser fechados por Escape, pelo botão ou clicando fora. Sem JavaScript, todas as pastas permanecem visíveis. O site respeita a preferência por movimento reduzido.
 
+A aba da seção Sobre mim sobrepõe a base da polaroid, criando o efeito de foto saindo da pasta. A foto e o clipe entram juntos, com um movimento suave ao passar o mouse. As seções aparecem durante a rolagem e os cartões entram em sequência. As animações são desativadas com a preferência por movimento reduzido, inclusive quando ela muda com a página aberta.
+
 Os botões dos projetos apresentam detalhes, acesso aos repositórios e contato por e-mail. Fibrac e Cobasi Shelter preservam as fotografias do Figma. GeoRisco e Stark têm capas tipográficas e conteúdo baseado nos READMEs dos repositórios fornecidos. O LinkedIn foi identificado nos READMEs da equipe.
 
 O endereço de Fibrac foi mantido conforme enviado, embora tenha retornado 404 na verificação pública; ele pode exigir acesso ao repositório privado ou atualização do endereço.

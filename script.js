@@ -142,3 +142,35 @@ dialog.addEventListener("click", (event) => {
     dialog.close();
 });
 dialog.addEventListener("close", () => projectTrigger?.focus());
+
+// A animação usa translate para preservar a inclinação própria de cada cartão.
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+if (!reducedMotion.matches && "IntersectionObserver" in window) {
+  const revealTargets = document.querySelectorAll(
+    ".about-heading, .about-copy, .section-heading, .skill-card, .archive-intro, .folder, .contact-top, .email-link",
+  );
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-revealed");
+        revealObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.08, rootMargin: "0px 0px -24px 0px" },
+  );
+
+  revealTargets.forEach((element) => {
+    if (element.classList.contains("skill-card")) {
+      const index = [...element.parentElement.children].indexOf(element);
+      element.style.setProperty("--reveal-delay", `${index * 80}ms`);
+    }
+    element.classList.add("reveal-pending");
+    revealObserver.observe(element);
+  });
+  reducedMotion.addEventListener("change", (event) => {
+    if (!event.matches) return;
+    revealObserver.disconnect();
+    revealTargets.forEach((element) => element.classList.add("is-revealed"));
+  });
+}
