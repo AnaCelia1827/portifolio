@@ -28,15 +28,17 @@ O site estará em `http://localhost:4173`.
 
 As abas aceitam clique, setas do teclado, Home e End. Os detalhes dos projetos abrem com foco contido e podem ser fechados por Escape, pelo botão ou clicando fora. Sem JavaScript, todas as pastas permanecem visíveis. O site respeita a preferência por movimento reduzido.
 
-Os botões dos projetos apresentam os detalhes disponíveis no Figma e uma opção de contato por e-mail. Links externos dos projetos e o endereço do LinkedIn podem ser acrescentados quando fornecidos.
+Os botões dos projetos apresentam detalhes, acesso aos repositórios e contato por e-mail. Fibrac e Cobasi Shelter preservam as fotografias do Figma. GeoRisco e Stark têm capas tipográficas e conteúdo baseado nos READMEs dos repositórios fornecidos. O LinkedIn foi identificado nos READMEs da equipe.
+
+O endereço de Fibrac foi mantido conforme enviado, embora tenha retornado 404 na verificação pública; ele pode exigir acesso ao repositório privado ou atualização do endereço.
 
 ## Cores
 
-| Uso | Cor |
-| --- | --- |
-| Papel | `#E3D9DA` |
-| Roxo | `#71557B` |
-| Texto | `#3A335C` |
+| Uso               | Cor       |
+| ----------------- | --------- |
+| Papel             | `#E3D9DA` |
+| Roxo              | `#71557B` |
+| Texto             | `#3A335C` |
 | Rosa das estrelas | `#DEAFC3` |
 
 As imagens foram baixadas dos endereços de exportação do Figma; nenhum link temporário é usado em tempo de execução. As fontes são distribuídas sob a licença SIL Open Font License, incluída em `assets/fonts/`.
