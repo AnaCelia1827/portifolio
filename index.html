@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#c9e5ff" />
     <meta
       name="description"
       content="Portfólio de Ana Célia Amaral, estudante de Engenharia de Software no Inteli. Projetos, tecnologia, design e ideias que saem do papel."
@@ -24,6 +24,7 @@
       type="font/ttf"
       crossorigin
     />
+    <link rel="preload" href="assets/fonts/instrument-serif-italic.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
@@ -57,612 +58,521 @@
         <path d="M7 10v7m4 0v-7m0 3a3 3 0 0 1 6 0v4" />
         <circle cx="7" cy="7" r=".5" />
       </symbol>
+      <symbol id="icon-spark" viewBox="0 0 64 64"><path d="M32 3 36 27 61 32 36 37 32 61 27 37 3 32 27 27Z"/></symbol>
+      <symbol id="icon-flower" viewBox="0 0 64 64"><path d="M32 21C14-8 0 18 21 28-8 30 8 55 26 39 20 68 48 68 39 40 64 56 71 28 43 28 64 6 35-8 32 21Z"/><circle cx="32" cy="32" r="6"/></symbol>
     </svg>
 
-    <header class="header">
-      <div class="header-inner wrap">
-        <a class="wordmark" href="#inicio" aria-label="Ana Célia, início"
-          >ana<span>célia</span
-          ><img src="assets/estrela-hero.svg" alt="" width="51" height="52"
-        /></a>
-        <nav aria-label="Navegação principal">
-          <a href="#sobre">Sobre mim</a>
-          <a href="#habilidades">Habilidades</a>
-          <a href="#projetos">Projetos</a>
-          <a class="nav-contact" href="#contato"
-            >Vamos conversar <svg class="icon"><use href="#icon-arrow" /></svg
-          ></a>
-        </nav>
-      </div>
-    </header>
 
+    <header class="site-header wrap">
+      <a class="wordmark" href="#inicio" aria-label="Ana Célia, início">ana célia<svg class="icon flower"><use href="#icon-flower"/></svg></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Abrir menu"><span></span><span></span></button>
+      <nav id="main-navigation" aria-label="Navegação principal">
+        <a href="#sobre">Sobre mim</a><a href="#projetos">Projetos</a><a href="#habilidades">Habilidades</a><a href="#formacao">Formação</a><a href="#comunidade">Comunidade</a>
+        <a class="nav-contact" href="#contato">Diga um oi! <svg class="icon"><use href="#icon-arrow"/></svg></a>
+      </nav>
+    </header>
     <main id="principal">
       <section class="hero wrap" id="inicio" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="hello">Olá, eu sou a</p>
-          <h1 id="hero-title">
-            Ana Célia<img
-              class="hero-star"
-              src="assets/estrela-hero.svg"
-              alt=""
-              width="51"
-              height="52"
-            />
-          </h1>
-          <p class="hero-description">
-            Estudante de Engenharia de Software<br class="desktop-break" />
-            e Técnica em Informática.
-          </p>
-          <a class="button" href="#projetos"
-            >Conheça meus projetos
-            <svg class="icon"><use href="#icon-arrow" /></svg
-          ></a>
-          <div class="hero-note">
-            <span class="hand-line" aria-hidden="true"></span>entre código,
-            criatividade e um café.
+        <div class="hero-topline"><span>Código, design & um pouco de mim.</span><span>Feito por Ana Célia Amaral</span></div>
+        <div class="hero-lettering">
+          <svg class="hero-spark spark-left" aria-hidden="true"><use href="#icon-spark"/></svg>
+          <h1 id="hero-title">Portfólio</h1>
+          <span class="edition">edição 2026</span>
+          <svg class="hero-spark spark-right" aria-hidden="true"><use href="#icon-spark"/></svg>
+        </div>
+        <div class="hero-collage">
+          <div class="portrait-group">
+            <span class="hello-sticker">oi, eu sou a Ana!</span>
+            <figure class="polaroid"><div class="portrait-crop"><img src="assets/ana-celia.png" width="1365" height="2048" alt="Ana Célia sorrindo, com óculos e blusa preta" fetchpriority="high"/></div><figcaption>Ana Célia Amaral <svg class="icon flower"><use href="#icon-flower"/></svg></figcaption></figure>
+            <span class="photo-note">prazer em te conhecer :)</span>
           </div>
+          <div class="bio-group" id="sobre">
+            <article class="bio-window">
+              <div class="window-bar"><span>um-pouco-sobre-mim.txt</span><span class="window-controls" aria-hidden="true">― □ ×</span></div>
+              <div class="bio-content"><h2>Entre <em>código</em><br />e criatividade.</h2>
+                <p>Sou a <strong>Ana Célia</strong>, estudante de Engenharia de Software no <strong>Inteli</strong> e técnica em Informática.</p>
+                <p>Gosto de conectar criatividade, comunicação, design e programação para transformar ideias em projetos que gerem valor para as pessoas.</p>
+                <p class="bio-interests">Desenvolvimento web · UX/UI · Inteligência Artificial</p>
+              </div>
+              <div class="window-status"><span class="status-dot"></span> Sempre curiosa. Sempre criando.</div>
+            </article>
+            <div class="hero-links"><a class="gloss-button lime" href="#projetos">Explore meus projetos <svg class="icon"><use href="#icon-down"/></svg></a><a class="hero-github" href="https://github.com/AnaCelia1827" target="_blank" rel="noopener noreferrer" aria-label="Conheça meu GitHub"><svg class="icon"><use href="#icon-github"/></svg></a></div>
+          </div>
+          <div class="collage-decoration" aria-hidden="true"><span class="code-sticker">&lt;/&gt;</span><span class="tiny-note">ideias<br />em construção</span><svg class="flower decoration-flower"><use href="#icon-flower"/></svg></div>
         </div>
-        <div class="portrait-scene">
-          <div class="portrait-grid" aria-hidden="true"></div>
-          <span class="photo-label">um pouquinho de mim</span>
-          <figure class="polaroid">
-            <div class="portrait-crop">
-              <img
-                src="assets/ana-celia.png"
-                alt="Ana Célia sorrindo, com óculos e blusa preta"
-                width="1365"
-                height="2048"
-                fetchpriority="high"
-              />
-            </div>
-            <figcaption>Ana Célia Amaral <span>♡</span></figcaption>
-          </figure>
-          <img
-            class="paperclip"
-            src="assets/clipe.png"
-            alt=""
-            width="244"
-            height="167"
-          />
-          <span class="photo-sticker">criatividade<br />em construção</span>
-        </div>
-        <a class="scroll-cue" href="#sobre"
-          >Continue explorando <svg class="icon"><use href="#icon-down" /></svg
-        ></a>
+        <div class="hero-bottomline"><span>Um encontro entre tecnologia & sensibilidade.</span><a href="#projetos">Continue explorando <svg class="icon"><use href="#icon-down"/></svg></a></div>
       </section>
-
-      <section class="about" id="sobre" aria-labelledby="about-title">
-        <div class="about-inner wrap">
-          <div class="about-heading">
-            <img src="assets/estrela-sobre.svg" alt="" width="73" height="79" />
-            <h2 id="about-title">Sobre mim</h2>
-            <span class="about-caption">muito prazer :)</span>
-          </div>
-          <div class="about-copy">
-            <p>
-              Sou estudante de Engenharia de Software no
-              <strong>Inteli</strong> e apaixonada por tecnologia, criatividade
-              e inovação. Tenho interesse em desenvolvimento web, UX/UI e
-              Inteligência Artificial.
-            </p>
-            <p>
-              Gosto de conectar diferentes áreas do conhecimento, unindo
-              <strong>criatividade, comunicação, design e programação</strong>
-              para transformar ideias em projetos que gerem valor para as
-              pessoas e para a sociedade.
-            </p>
-          </div>
-        </div>
-      </section>
-
+      <div class="ribbon" aria-hidden="true"><span>código com criatividade</span><svg><use href="#icon-spark"/></svg><span>ideias com propósito</span><svg><use href="#icon-spark"/></svg><span>curiosidade sem fim</span><svg><use href="#icon-spark"/></svg><span>código com criatividade</span></div>
       <section
-        class="skills wrap"
+        class="projects section wrap"
+        id="projetos"
+        aria-labelledby="projects-title"
+      >
+        <div class="section-heading">
+          <h2 id="projects-title">Projetos <em>selecionados</em></h2>
+          <p>Ideias que saíram do papel.<br />Feitas de código, pessoas e propósito.<br /><a class="hackathons-link" href="#hackathons">Ver projetos de hackathons <svg class="icon"><use href="#icon-down" /></svg></a></p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card glass" id="projeto-fibrac">
+            <div class="window-bar"><span>fibrac.projeto</span><span class="window-controls" aria-hidden="true">― □ ×</span></div>
+            <div class="project-image fibrac-crop">
+              <img src="assets/fibrac.png" width="591" height="1280" alt="Equipe do Fibrac apresentando a máquina de produção de azulejos na FEBIC" loading="lazy" />
+              <span class="image-tag">2025</span>
+            </div>
+            <div class="project-content">
+              <div class="project-title"><h3>Fibrac</h3><a class="project-arrow" href="https://github.com/AnaCelia1827/area_operador_projetofibrac" target="_blank" rel="noopener noreferrer" aria-label="Abrir repositório do Fibrac"><svg class="icon"><use href="#icon-arrow" /></svg></a></div>
+              <p class="project-status">Projeto realizado · Pesquisa científica premiada</p>
+              <p>Automação e controle de qualidade na produção de azulejos sustentáveis à base de fibra de coco.</p>
+              <div class="project-tags"><span>Inteligência Artificial</span><span>IoT &amp; automação</span><span>Sustentabilidade</span></div>
+              <details class="project-details">
+                <summary>Sobre o projeto <svg class="icon"><use href="#icon-down" /></svg></summary>
+                <div class="detail-copy">
+                  <p><strong>Minha contribuição:</strong> Participei do desenvolvimento de uma máquina semiautomatizada, atuando no dashboard, banco de dados, integração de sensores e visão computacional. Construí uma base própria de aproximadamente 1.000 imagens e treinei um classificador de peças adequadas e defeituosas no Teachable Machine.</p>
+                  <p><strong>Resultados e estágio:</strong> O protótipo reúne monitoramento e classificação visual. Recebeu destaque em Novas Tecnologias na FEBIC 2025 e credenciamento para a Copa Science México 2026.</p>
+                  <p><strong>Stack e ferramentas:</strong> Teachable Machine, visão computacional, sensores, IoT, dashboard web e banco de dados.</p>
+                  <a href="https://github.com/AnaCelia1827/area_operador_projetofibrac" target="_blank" rel="noopener noreferrer">Ver repositório <svg class="icon"><use href="#icon-arrow" /></svg></a>
+                  <a href="mailto:anaceliaaugusta@gmail.com?subject=Projeto%20Fibrac">Conversar sobre o projeto</a>
+                </div>
+              </details>
+            </div>
+          </article>
+          <article class="project-card glass" id="projeto-dono-agro">
+            <div class="window-bar"><span>dono-agro.ia</span><span class="window-controls" aria-hidden="true">― □ ×</span></div>
+            <div class="project-image project-poster case-poster dono-agro-poster" aria-hidden="true">
+              <strong>Dono Agro</strong>
+              <span class="poster-caption">Reconhecimento visual no campo</span>
+            </div>
+            <div class="project-content">
+              <div class="project-title"><h3>Dono Agro / Agro App</h3></div>
+              <p class="project-status">Em desenvolvimento</p>
+              <p>Módulo de reconhecimento visual de problemas agrícolas, com operação offline prevista para apoiar produtores no campo.</p>
+              <div class="project-tags"><span>Visão computacional</span><span>IA embarcada</span><span>Requisitos</span></div>
+              <details class="project-details">
+                <summary>Sobre o projeto <svg class="icon"><use href="#icon-down" /></svg></summary>
+                <div class="detail-copy">
+                  <p><strong>Minha contribuição:</strong> Participei da definição de personas, jornadas, requisitos e análise da qualidade das imagens. O módulo propõe identificar possíveis pragas, doenças, deficiências nutricionais e plantas daninhas, associando as classes ao conteúdo agronômico do aplicativo.</p>
+                  <p><strong>Resultados e estágio:</strong> Foram estruturados o problema, o escopo e os requisitos do MVP. A arquitetura prevê organização de datasets, Transfer Learning e otimização para dispositivos móveis; os resultados quantitativos do modelo ainda não estão documentados.</p>
+                  <p><strong>Stack e ferramentas:</strong> Stack prevista: Python, MobileNetV3 ou EfficientNet-Lite, TensorFlow Lite/LiteRT e Transfer Learning.</p>
+
+                  <a href="mailto:anaceliaaugusta@gmail.com?subject=Projeto%20Dono%20Agro%20%2F%20Agro%20App">Conversar sobre o projeto</a>
+                </div>
+              </details>
+            </div>
+          </article>
+          <article class="project-card glass" id="projeto-georisco">
+            <div class="window-bar"><span>georisco.web</span><span class="window-controls" aria-hidden="true">― □ ×</span></div>
+            <div class="project-image project-poster georisco-poster" aria-hidden="true">
+              <span class="poster-city">Santo André</span><strong>GeoRisco<span>.</span></strong>
+              <span class="poster-caption">Tecnologia para cuidar de pessoas.</span>
+              <div class="map-lines"></div><span class="map-point point-one"></span><span class="map-point point-two"></span><span class="map-point point-three"></span><span class="image-tag">2026</span>
+            </div>
+            <div class="project-content">
+              <div class="project-title"><h3>GeoRisco Santo André</h3><a class="project-arrow" href="https://git.inteli.edu.br/publico/2026-1b/t25/g05" target="_blank" rel="noopener noreferrer" aria-label="Abrir repositório do GeoRisco Santo André"><svg class="icon"><use href="#icon-arrow" /></svg></a></div>
+              <p class="project-status">Projeto acadêmico · Entregas desenvolvidas</p>
+              <p>Plataforma georreferenciada para cadastro, acompanhamento e priorização de atendimentos a famílias em áreas de risco.</p>
+              <div class="project-tags"><span>Back-end</span><span>Banco de dados</span><span>Geolocalização</span></div>
+              <details class="project-details">
+                <summary>Sobre o projeto <svg class="icon"><use href="#icon-down" /></svg></summary>
+                <div class="detail-copy">
+                  <p><strong>Minha contribuição:</strong> Atuei no back-end, modelagem e integração do banco de dados, regras de negócio, filtros de consulta e funcionalidades de exportação. O projeto foi desenvolvido no Inteli para a Defesa Civil de Santo André, com separação de responsabilidades e testes automatizados.</p>
+                  <p><strong>Resultados e estágio:</strong> Foram desenvolvidos recursos de gerenciamento cadastral, consultas, filtros e exportações para estruturar as informações de famílias e vulnerabilidades utilizadas pela Defesa Civil.</p>
+                  <p><strong>Stack e ferramentas:</strong> TypeScript, Node.js, Express, PostgreSQL, Supabase, Jest, APIs REST, GitLab e Figma.</p>
+                  <a href="https://git.inteli.edu.br/publico/2026-1b/t25/g05" target="_blank" rel="noopener noreferrer">Ver repositório <svg class="icon"><use href="#icon-arrow" /></svg></a>
+                  <a href="mailto:anaceliaaugusta@gmail.com?subject=Projeto%20GeoRisco%20Santo%20Andr%C3%A9">Conversar sobre o projeto</a>
+                </div>
+              </details>
+            </div>
+          </article>
+          <article class="project-card glass" id="projeto-ldc">
+            <div class="window-bar"><span>ldc.dados</span><span class="window-controls" aria-hidden="true">― □ ×</span></div>
+            <div class="project-image project-poster case-poster ldc-poster" aria-hidden="true">
+              <strong>LDC</strong>
+              <span class="poster-caption">Louis Dreyfus Company</span>
+            </div>
+            <div class="project-content">
+              <div class="project-title"><h3>LDC</h3></div>
+              <p class="project-status">Projeto acadêmico · Modelagem preditiva</p>
+              <p>Estudo de modelos preditivos para produção animal e demanda por ração, milho e farelo de soja.</p>
+              <div class="project-tags"><span>Ciência de dados</span><span>Machine Learning</span><span>Analytics</span></div>
+              <details class="project-details">
+                <summary>Sobre o projeto <svg class="icon"><use href="#icon-down" /></svg></summary>
+                <div class="detail-copy">
+                  <p><strong>Minha contribuição:</strong> Trabalhei com análise exploratória, tratamento de dados, engenharia de atributos e construção de modelos de referência. Foram consideradas variáveis de produção animal, preços agrícolas, câmbio e conversão alimentar.</p>
+                  <p><strong>Resultados e estágio:</strong> O projeto estruturou uma abordagem orientada por dados para estudar a demanda de ração, incluindo preparação, hipóteses, modelagem e avaliação. O case não apresenta métricas definitivas de desempenho.</p>
+                  <p><strong>Stack e ferramentas:</strong> Python, Pandas, NumPy, Scikit-learn, Jupyter/Google Colab e ferramentas de visualização de dados.</p>
+
+                  <a href="mailto:anaceliaaugusta@gmail.com?subject=Projeto%20LDC">Conversar sobre o projeto</a>
+                </div>
+              </details>
+            </div>
+          </article>
+          <article class="project-card glass" id="projeto-banco-inter">
+            <div class="window-bar"><span>banco-inter.web3</span><span class="window-controls" aria-hidden="true">― □ ×</span></div>
+            <div class="project-image project-poster case-poster banco-inter-poster" aria-hidden="true">
+              <strong>Banco Inter</strong>
+              <span class="poster-caption">Liga de Blockchain do Inteli</span>
+            </div>
+            <div class="project-content">
+              <div class="project-title"><h3>Banco Inter</h3></div>
+              <p class="project-status">Desenvolvimento de produto</p>
+              <p>Experiência de uma plataforma de operações interfinanceiras para profissionais de uma mesa DI/pernoite.</p>
+              <div class="project-tags"><span>UX/UI &amp; front-end</span><span>Fintech</span><span>Web3</span></div>
+              <details class="project-details">
+                <summary>Sobre o projeto <svg class="icon"><use href="#icon-down" /></svg></summary>
+                <div class="detail-copy">
+                  <p><strong>Minha contribuição:</strong> Trabalhei na definição e evolução de interfaces, wireframes e componentes visuais para criação de ofertas, acompanhamento de posições e consulta de informações. Minha contribuição principal envolve UX/UI, prototipação e front-end.</p>
+                  <p><strong>Resultados e estágio:</strong> Foram produzidos fluxos, protótipos e estruturas de interface para apoiar as operações previstas. O projeto considera front-end React/Next.js, back-end Node.js e integrações Web3.</p>
+                  <p><strong>Stack e ferramentas:</strong> Figma, React, Next.js, TypeScript, Node.js, Express, MongoDB, APIs REST, Server-Sent Events e ferramentas de integração blockchain.</p>
+
+                  <a href="mailto:anaceliaaugusta@gmail.com?subject=Projeto%20Banco%20Inter">Conversar sobre o projeto</a>
+                </div>
+              </details>
+            </div>
+          </article>
+          <article class="project-card glass" id="projeto-martenare">
+            <div class="window-bar"><span>martenare.backend</span><span class="window-controls" aria-hidden="true">― □ ×</span></div>
+            <div class="project-image project-poster case-poster martenare-poster" aria-hidden="true">
+              <strong>Martenare</strong>
+              <span class="poster-caption">Requisitos, dados &amp; arquitetura</span>
+            </div>
+            <div class="project-content">
+              <div class="project-title"><h3>Martenare</h3></div>
+              <p class="project-status">Em andamento</p>
+              <p>Estruturação de requisitos, modelagem de dados e desenvolvimento back-end de um sistema em evolução.</p>
+              <div class="project-tags"><span>Back-end</span><span>Requisitos</span><span>Banco de dados</span></div>
+              <details class="project-details">
+                <summary>Sobre o projeto <svg class="icon"><use href="#icon-down" /></svg></summary>
+                <div class="detail-copy">
+                  <p><strong>Minha contribuição:</strong> Participo da organização das funcionalidades, definição do modelo de persistência e transformação das necessidades do sistema em estruturas e componentes técnicos.</p>
+                  <p><strong>Resultados e estágio:</strong> O projeto está em andamento, com foco em engenharia de requisitos, modelagem de banco de dados e organização da arquitetura de software.</p>
+
+
+                  <a href="mailto:anaceliaaugusta@gmail.com?subject=Projeto%20Martenare">Conversar sobre o projeto</a>
+                </div>
+              </details>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="hackathons section wrap" id="hackathons" aria-labelledby="hackathons-title">
+        <div class="section-heading">
+          <h2 id="hackathons-title">Projetos de <em>hackathons</em></h2>
+          <p>Colaboração, experimentação<br />e ideias colocadas em prática.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card glass" id="projeto-stark"><div class="window-bar"><span>stark.hackathon</span><span class="window-controls" aria-hidden="true">― □ ×</span></div>
+            <div
+              class="project-image project-poster stark-poster"
+              aria-hidden="true"
+            >
+              <span class="poster-city">Hack4Freedom Brasil 2026</span
+              ><strong
+                >Stark<img
+                  src="assets/estrela-hero.svg"
+                  width="51"
+                  height="52"
+                  alt=""
+                  loading="lazy" /></strong
+              ><span class="poster-caption"
+                >Aprender. Trabalhar.<br />Receber com liberdade.</span
+              ><span class="image-tag glass">2026</span>
+            </div>
+            <div class="project-content">
+              <div class="project-title">
+                <h3>Stark</h3>
+                <a
+                  class="project-arrow"
+                  href="https://github.com/AnaCelia1827/Hack4freedom"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Abrir repositório do Stark"
+                  ><svg class="icon"><use href="#icon-arrow" /></svg
+                ></a>
+              </div>
+              <p>
+                Plataforma de capacitação, tarefas remuneradas e pagamentos
+                com Bitcoin e Lightning Network para mulheres em vulnerabilidade econômica.
+              </p>
+              <div class="project-tags">
+                <span>Hackathon</span><span>UX/UI & front-end</span><span>Blockchain</span>
+              </div>
+              <details class="project-details">
+                <summary>
+                  Sobre o projeto
+                  <svg class="icon"><use href="#icon-down" /></svg>
+                </summary>
+                <div class="detail-copy">
+                  <p>
+                    Desenvolvido no Hack4Freedom Brasil 2026. Atuei em UX/UI e
+                    desenvolvimento front-end, colaborando nas interfaces e na
+                    experiência de navegação da solução.
+                  </p>
+                  <p>O MVP integra autenticação Nostr e pagamentos Lightning.
+                    Persistência completa, testes de segurança e validação com
+                    usuárias fazem parte da evolução do projeto.</p>
+                  <p>React, TypeScript, Python, Flask e PostgreSQL.</p>
+                  <a href="https://hack4freedom-three.vercel.app/" target="_blank" rel="noopener noreferrer">Ver demonstração do Stark <svg class="icon"><use href="#icon-arrow" /></svg></a>
+                  <a
+                    href="https://github.com/AnaCelia1827/Hack4freedom"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Ver repositório
+                    <svg class="icon"><use href="#icon-arrow" /></svg></a
+                  ><a
+                    href="mailto:anaceliaaugusta@gmail.com?subject=Projeto%20Stark"
+                    >Conversar sobre o projeto</a
+                  >
+                </div>
+              </details>
+            </div>
+          </article>
+          <article class="project-card glass" id="projeto-ecoa">
+            <div class="window-bar"><span>ecoa.hackathon</span><span class="window-controls" aria-hidden="true">― □ ×</span></div>
+            <div class="project-image project-poster ecoa-poster" aria-hidden="true">
+              <span class="poster-city">Youth Challenge Blockchain 2026</span>
+              <strong>Ecoa<svg class="flower"><use href="#icon-flower" /></svg></strong>
+              <span class="poster-caption">Cada voz tem seu espaço.</span>
+              <span class="image-tag">2026</span>
+            </div>
+            <div class="project-content">
+              <div class="project-title">
+                <h3>Ecoa</h3>
+                <a class="project-arrow" href="https://github.com/AnaCelia1827/Ecoa" target="_blank" rel="noopener noreferrer" aria-label="Abrir repositório do Ecoa"><svg class="icon"><use href="#icon-arrow" /></svg></a>
+              </div>
+              <p>Protótipo acessível e gamificado de comunicação, com jornadas para crianças, responsáveis e profissionais.</p>
+              <div class="project-tags"><span>Hackathon</span><span>Front-end</span><span>Acessibilidade & IA</span></div>
+              <details class="project-details">
+                <summary>Sobre o projeto <svg class="icon"><use href="#icon-down" /></svg></summary>
+                <div class="detail-copy">
+                  <p>Desenvolvido no Youth Challenge Blockchain 2026. O protótipo navegável apresenta missões gamificadas, telas de consentimento, revisão de amostras, dashboards e captura de áudio quando suportada pelo navegador.</p>
+                  <p>A adaptação de modelos de reconhecimento de fala e a integração com Psyche Network e Solana permanecem propostas técnicas, sem validação de desempenho apresentada.</p>
+                  <p>React, JavaScript, Vite, CSS Modules, MediaRecorder e Speech Synthesis.</p>
+                  <a href="https://ecoa-zeta.vercel.app/" target="_blank" rel="noopener noreferrer">Ver demonstração do Ecoa <svg class="icon"><use href="#icon-arrow" /></svg></a>
+                  <a href="https://github.com/AnaCelia1827/Ecoa" target="_blank" rel="noopener noreferrer">Ver repositório <svg class="icon"><use href="#icon-arrow" /></svg></a>
+                  <a href="mailto:anaceliaaugusta@gmail.com?subject=Projeto%20Ecoa">Conversar sobre o projeto</a>
+                </div>
+              </details>
+            </div>
+          </article>
+        </div>
+      </section>      <section
+        class="skills section"
         id="habilidades"
         aria-labelledby="skills-title"
       >
-        <div class="section-heading">
-          <h2 id="skills-title">Minha caixa<br />de ferramentas.</h2>
-          <p>Um pouco do que eu uso<br />para tirar ideias do papel.</p>
-          <img src="assets/estrela.svg" alt="" width="56" height="54" />
-        </div>
-        <div class="skill-cards">
-          <article class="skill-card skill-web">
-            <span class="card-number">01</span>
-            <h3>Do código<br />à interface.</h3>
-            <div class="card-graphic web-graphic" aria-hidden="true">
-              &lt;/&gt;
-            </div>
-            <p>Desenvolvimento web</p>
-            <ul class="tech-list">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-            </ul>
-          </article>
-          <article class="skill-card skill-data">
-            <span class="card-number">02</span>
-            <h3>Por trás<br />das ideias.</h3>
-            <div class="card-graphic data-graphic" aria-hidden="true">
-              <i></i><i></i><i></i>
-            </div>
-            <p>Dados & back-end</p>
-            <ul class="tech-list">
-              <li>Node.js</li>
-              <li>Python</li>
-              <li>SQL</li>
-            </ul>
-          </article>
-          <article class="skill-card skill-design">
-            <span class="card-number">03</span>
-            <h3>Um olhar para<br />a experiência.</h3>
-            <div class="card-graphic design-graphic" aria-hidden="true">
-              <i></i><b>+</b>
-            </div>
-            <p>Interesse em UX/UI</p>
-            <p class="skill-detail">
-              Criatividade e design para conectar pessoas e tecnologia.
-            </p>
-          </article>
-          <article class="skill-card skill-ideas">
-            <span class="card-number">04</span>
-            <h3>Sempre<br />um novo olhar.</h3>
-            <img
-              class="ideas-star"
-              src="assets/estrela-lima.svg"
-              alt=""
-              width="73"
-              height="79"
-              loading="lazy"
-            />
-            <p>Tecnologia & inovação</p>
-            <p class="skill-detail">
-              Curiosidade por Inteligência Artificial e diferentes áreas do
-              conhecimento.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <div class="ribbon-viewport" aria-hidden="true">
-        <div class="ribbon">
-          <div>
-            criatividade encontra tecnologia
-            <img
-              src="assets/estrela-marinho.svg"
-              alt=""
-              width="51"
-              height="52"
-            />
-            ideias que saem do papel
-            <img
-              src="assets/estrela-marinho.svg"
-              alt=""
-              width="51"
-              height="52"
-            />
-            criatividade encontra tecnologia
-            <img
-              src="assets/estrela-marinho.svg"
-              alt=""
-              width="51"
-              height="52"
-            />
-            ideias que saem do papel
-            <img
-              src="assets/estrela-marinho.svg"
-              alt=""
-              width="51"
-              height="52"
-            />
+        <div class="wrap">
+          <div class="section-heading">
+            <h2 id="skills-title">Minha <em>caixa de ferramentas</em></h2>
+            <p>Um pouco de lógica.<br />Um tanto de criatividade.</p>
           </div>
-        </div>
-      </div>
-
-      <section
-        class="archive wrap"
-        id="projetos"
-        aria-labelledby="archive-title"
-      >
-        <div class="archive-intro">
-          <h2 id="archive-title">Meu arquivo<br />de experiências.</h2>
-          <p>
-            Projetos, aprendizados e conexões.<br />Cada pasta conta um pedaço
-            da história.
-          </p>
-        </div>
-        <div class="folder">
-          <div class="folder-tabs" aria-label="Explorar experiências">
-            <a
-              class="folder-tab tab-projects"
-              href="#painel-projetos"
-              id="aba-projetos"
-              >Projetos <span>04</span></a
-            >
-            <a
-              class="folder-tab tab-education"
-              href="#painel-formacao"
-              id="aba-formacao"
-              >Formação <span>02</span></a
-            >
-            <a
-              class="folder-tab tab-community"
-              href="#painel-comunidade"
-              id="aba-comunidade"
-              >Comunidade <span>03</span></a
-            >
-          </div>
-
-          <div class="folder-body">
-            <div
-              class="folder-panel projects-panel"
-              id="painel-projetos"
-              aria-labelledby="aba-projetos"
-            >
-              <div class="panel-heading">
-                <h3>Projetos selecionados</h3>
-                <span>ideias em prática, impacto de verdade.</span>
+          <div class="skill-cards">
+            <article class="skill-card glass">
+              <span class="card-slot" aria-hidden="true"></span>
+              <div class="skill-symbol" aria-hidden="true">&lt;/&gt;</div>
+              <h3>Desenvolvimento<br />web</h3>
+              <ul class="tech-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+              </ul>
+            </article>
+            <article class="skill-card glass">
+              <span class="card-slot" aria-hidden="true"></span>
+              <div class="skill-symbol skill-data" aria-hidden="true">
+                <i></i><i></i><i></i>
               </div>
-              <div class="project-grid">
-                <article class="project-card">
-                  <button
-                    class="project-open"
-                    data-project="fibrac"
-                    aria-label="Ver detalhes do projeto Fibrac"
-                  >
-                    <div class="project-image fibrac-crop">
-                      <img
-                        src="assets/fibrac.png"
-                        alt="Equipe do Fibrac apresentando a máquina de produção de azulejos na FEBIC"
-                        width="591"
-                        height="1280"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div class="project-title">
-                      <h4>Fibrac</h4>
-                      <span class="round-arrow"
-                        ><svg class="icon"><use href="#icon-arrow" /></svg
-                      ></span>
-                    </div>
-                  </button>
-                  <div class="project-description">
-                    <span class="project-year"
-                      >2025 · Tecnologia & sustentabilidade</span
-                    >
-                    <p>
-                      Máquina semi-automatizada para a produção de azulejos à
-                      base de fibra de coco.
-                    </p>
-                  </div>
-                </article>
-                <article class="project-card">
-                  <button
-                    class="project-open"
-                    data-project="cobasi"
-                    aria-label="Ver detalhes do projeto Cobasi Shelter"
-                  >
-                    <div class="project-image cobasi-crop">
-                      <img
-                        src="assets/cobasi-shelter.png"
-                        alt="Ana Célia testando o jogo Cobasi Shelter em um notebook"
-                        width="591"
-                        height="1280"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div class="project-title">
-                      <h4>Cobasi Shelter</h4>
-                      <span class="round-arrow"
-                        ><svg class="icon"><use href="#icon-arrow" /></svg
-                      ></span>
-                    </div>
-                  </button>
-                  <div class="project-description">
-                    <span class="project-year"
-                      >2026 · Jogo digital educativo</span
-                    >
-                    <p>
-                      Um jogo para conscientizar sobre a importância da adoção
-                      de animais.
-                    </p>
-                  </div>
-                </article>
-                <article class="project-card">
-                  <button
-                    class="project-open"
-                    data-project="georisco"
-                    aria-label="Ver detalhes do projeto GeoRisco Santo André"
-                  >
-                    <div
-                      class="project-image project-poster georisco-poster"
-                      aria-hidden="true"
-                    >
-                      <span class="poster-small">TECNOLOGIA QUE CUIDA</span
-                      ><strong>Geo<br />Risco<span>.</span></strong
-                      ><span class="poster-bottom"
-                        >Santo André <span>Defesa Civil · Inteli</span></span
-                      >
-                    </div>
-                    <div class="project-title">
-                      <h4>GeoRisco Santo André</h4>
-                      <span class="round-arrow"
-                        ><svg class="icon"><use href="#icon-arrow" /></svg
-                      ></span>
-                    </div>
-                  </button>
-                  <div class="project-description">
-                    <span class="project-year"
-                      >2026 · Aplicação web georreferenciada</span
-                    >
-                    <p>
-                      Cadastro e monitoramento de famílias em áreas de risco
-                      para apoiar a Defesa Civil de Santo André.
-                    </p>
-                  </div>
-                </article>
-                <article class="project-card">
-                  <button
-                    class="project-open"
-                    data-project="stark"
-                    aria-label="Ver detalhes do projeto Stark"
-                  >
-                    <div
-                      class="project-image project-poster stark-poster"
-                      aria-hidden="true"
-                    >
-                      <span class="poster-small">HACK4FREEDOM · 2026</span
-                      ><strong
-                        >Stark<img
-                          src="assets/estrela-hero.svg"
-                          alt=""
-                          width="51"
-                          height="52"
-                          loading="lazy" /></strong
-                      ><span class="poster-bottom"
-                        >Aprender. Trabalhar.<br />Receber com liberdade.</span
-                      >
-                    </div>
-                    <div class="project-title">
-                      <h4>Stark</h4>
-                      <span class="round-arrow"
-                        ><svg class="icon"><use href="#icon-arrow" /></svg
-                      ></span>
-                    </div>
-                  </button>
-                  <div class="project-description">
-                    <span class="project-year"
-                      >2026 · Hack4Freedom · UX/UI & front-end</span
-                    >
-                    <p>
-                      Uma plataforma que conecta capacitação, trabalho digital e
-                      pagamentos para mulheres em vulnerabilidade econômica.
-                    </p>
-                  </div>
-                </article>
+              <h3>Dados &<br />back-end</h3>
+              <ul class="tech-list">
+                <li>Node.js</li>
+                <li>Python</li>
+                <li>SQL</li>
+              </ul>
+            </article>
+            <article class="skill-card glass">
+              <span class="card-slot" aria-hidden="true"></span>
+              <div class="skill-symbol skill-design" aria-hidden="true">
+                <i></i><i></i>
               </div>
-              <div class="folder-footnote">
-                <span>feito de curiosidade + vontade de criar</span
-                ><img
-                  src="assets/estrela-projetos.svg"
-                  alt=""
+              <h3>Design &<br />experiência</h3>
+              <p>
+                Interesse em UX/UI, unindo criatividade e tecnologia para
+                conectar pessoas.
+              </p>
+            </article>
+            <article class="skill-card glass">
+              <span class="card-slot" aria-hidden="true"></span>
+              <div class="skill-symbol" aria-hidden="true">
+                <img
+                  src="assets/estrela-hero.svg"
                   width="51"
-                  height="54"
+                  height="52"
+                  alt=""
                 />
               </div>
-            </div>
-
-            <div
-              class="folder-panel education-panel"
-              id="painel-formacao"
-              aria-labelledby="aba-formacao"
-            >
-              <div class="panel-heading">
-                <h3>Formação acadêmica</h3>
-                <span>as bases para o que vem a seguir.</span>
-              </div>
-              <div class="education-grid">
-                <article class="education-card">
-                  <div class="education-logo matias-crop">
-                    <img
-                      src="assets/fundacao-matias.png"
-                      alt="Fundação Matias Machline"
-                      width="225"
-                      height="225"
-                      loading="lazy"
-                    />
-                  </div>
-                  <span class="study-dates">2023 — 2025</span>
-                  <h4>Ensino Técnico</h4>
-                  <p>Técnico em Informática</p>
-                  <span>Fundação Matias Machline</span>
-                </article>
-                <article class="education-card">
-                  <div class="education-logo inteli-crop">
-                    <img
-                      src="assets/inteli.png"
-                      alt="Inteli — Instituto de Tecnologia e Liderança"
-                      width="1280"
-                      height="720"
-                      loading="lazy"
-                    />
-                  </div>
-                  <span class="study-dates">2026 — 2029</span>
-                  <h4>Graduação</h4>
-                  <p>Engenharia de Software</p>
-                  <span>Inteli</span>
-                </article>
-              </div>
-              <div class="folder-footnote">
-                <span>aprender, experimentar, construir. repetir.</span
-                ><img src="assets/estrela.svg" alt="" width="56" height="54" />
-              </div>
-            </div>
-
-            <div
-              class="folder-panel community-panel"
-              id="painel-comunidade"
-              aria-labelledby="aba-comunidade"
-            >
-              <div class="panel-heading">
-                <h3>Clubes & voluntariado</h3>
-                <span>crescer também é construir junto.</span>
-              </div>
-              <div class="community-grid">
-                <article class="community-card">
-                  <img
-                    class="club-frame"
-                    src="assets/cartao-clube.svg"
-                    alt=""
-                    width="275"
-                    height="349"
-                    loading="lazy"
-                  />
-                  <div class="club-logo blockchain-crop">
-                    <img
-                      src="assets/blockchain.png"
-                      alt="Inteli Blockchain"
-                      width="658"
-                      height="625"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h4>Inteli Blockchain</h4>
-                  <p>Membro</p>
-                </article>
-                <article class="community-card">
-                  <img
-                    class="club-frame"
-                    src="assets/cartao-clube.svg"
-                    alt=""
-                    width="275"
-                    height="349"
-                    loading="lazy"
-                  />
-                  <div class="club-logo codeclub-crop">
-                    <img
-                      src="assets/code-club.png"
-                      alt="Code Club — Rio do Código"
-                      width="557"
-                      height="475"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h4>Code Club</h4>
-                  <p>
-                    Incentiva o aprendizado em tecnologia e programação de
-                    jovens.
-                  </p>
-                </article>
-                <article class="community-card">
-                  <img
-                    class="club-frame"
-                    src="assets/cartao-clube.svg"
-                    alt=""
-                    width="275"
-                    height="349"
-                    loading="lazy"
-                  />
-                  <div class="club-logo grace-crop">
-                    <img
-                      src="assets/grace-hopper.png"
-                      alt="GraceHopper"
-                      width="593"
-                      height="522"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h4>GraceHopper</h4>
-                  <p>
-                    Apoio e fortalecimento da participação feminina na
-                    comunidade tech.
-                  </p>
-                </article>
-              </div>
-              <div class="folder-footnote">
-                <span>tecnologia faz mais sentido com pessoas.</span
-                ><img src="assets/estrela.svg" alt="" width="56" height="54" />
-              </div>
-            </div>
+              <h3>Tecnologia &<br />inovação</h3>
+              <p>
+                Curiosidade por Inteligência Artificial e diferentes áreas do
+                conhecimento.
+              </p>
+            </article>
           </div>
         </div>
-      </section>
-
-      <footer class="contact" id="contato" aria-labelledby="contact-title">
-        <div class="contact-inner wrap">
-          <div class="contact-top">
-            <div>
-              <p>Tem uma ideia por aí?</p>
-              <h2 id="contact-title">Vamos conversar.</h2>
+      </section>      <section
+        class="education section"
+        id="formacao"
+        aria-labelledby="education-title"
+      >
+        <div class="wrap">
+          <div class="section-heading">
+            <h2 id="education-title">Sempre <em>aprendendo</em></h2>
+            <p>As bases para construir<br />o que vem a seguir.</p>
+          </div>
+          <div class="education-list">
+            <article class="education-entry">
+              <div class="study-period">
+                <span>2026 — 2029</span
+                ><span class="study-type">Graduação</span>
+              </div>
+              <div class="education-logo inteli-crop">
+                <img
+                  src="assets/inteli.png"
+                  width="1280"
+                  height="720"
+                  alt="Inteli"
+                  loading="lazy"
+                />
+              </div>
+              <div class="study-description">
+                <h3>Engenharia de Software</h3>
+                <p>Inteli — Instituto de Tecnologia e Liderança</p>
+              </div>
+            </article>
+            <article class="education-entry">
+              <div class="study-period">
+                <span>2023 — 2025</span
+                ><span class="study-type">Ensino técnico</span>
+              </div>
+              <div class="education-logo matias-crop">
+                <img
+                  src="assets/fundacao-matias.png"
+                  width="225"
+                  height="225"
+                  alt="Fundação Matias Machline"
+                  loading="lazy"
+                />
+              </div>
+              <div class="study-description">
+                <h3>Técnico em Informática</h3>
+                <p>Fundação Matias Machline</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>      <section
+        class="community section wrap"
+        id="comunidade"
+        aria-labelledby="community-title"
+      >
+        <div class="section-heading">
+          <h2 id="community-title">Melhor <em>em comunidade</em></h2>
+          <p>Porque crescer também<br />é construir junto.</p>
+        </div>
+        <div class="community-grid">
+          <article class="community-card glass">
+            <div class="club-logo blockchain-crop">
+              <img
+                src="assets/blockchain.png"
+                width="658"
+                height="625"
+                alt="Inteli Blockchain"
+                loading="lazy"
+              />
             </div>
-            <img
-              src="assets/estrela-sobre.svg"
-              alt=""
-              width="73"
-              height="79"
-              loading="lazy"
-            />
+            <h3>Inteli Blockchain</h3>
+            <p>Membro da comunidade de blockchain do Inteli.</p>
+          </article>
+          <article class="community-card glass">
+            <div class="club-logo codeclub-crop">
+              <img
+                src="assets/code-club.png"
+                width="557"
+                height="475"
+                alt="Code Club — Rio do Código"
+                loading="lazy"
+              />
+            </div>
+            <h3>Code Club</h3>
+            <p>
+              Incentiva o aprendizado em tecnologia e programação de jovens.
+            </p>
+          </article>
+          <article class="community-card glass">
+            <div class="club-logo grace-crop">
+              <img
+                src="assets/grace-hopper.png"
+                width="593"
+                height="522"
+                alt="GraceHopper"
+                loading="lazy"
+              />
+            </div>
+            <h3>GraceHopper</h3>
+            <p>
+              Apoio e fortalecimento da participação feminina na comunidade
+              tech.
+            </p>
+          </article>
+        </div>
+      </section>      <footer class="contact" id="contato" aria-labelledby="contact-title">
+        <div class="wrap contact-inner">
+          <div class="contact-heading">
+            <h2 id="contact-title">
+              Vamos criar<br /><em>algo juntos?</em><svg class="icon">
+                <use href="#icon-arrow" />
+              </svg>
+            </h2>
+            <p>
+              Tem uma ideia por aí?<br />Meu próximo projeto pode começar com
+              uma conversa.
+            </p>
           </div>
           <a class="email-link" href="mailto:anaceliaaugusta@gmail.com"
             >anaceliaaugusta@gmail.com
             <svg class="icon"><use href="#icon-arrow" /></svg
           ></a>
-          <div class="contact-bottom">
-            <div class="social-links">
-              <a
-                href="https://github.com/AnaCelia1827"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><svg class="icon"><use href="#icon-github" /></svg> GitHub
-                <svg class="icon small-icon"><use href="#icon-arrow" /></svg></a
-              ><a
-                href="https://www.linkedin.com/in/ana-c%C3%A9lia-amaral/"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><svg class="icon"><use href="#icon-linkedin" /></svg> LinkedIn
-                <svg class="icon small-icon"><use href="#icon-arrow" /></svg
-              ></a>
-            </div>
+          <button class="copy-email" type="button" hidden>Copiar e-mail <svg class="icon"><use href="#icon-mail" /></svg></button><span class="copy-status" role="status" aria-live="polite"></span>
+          <div class="social-links">
+            <a
+              class="glass social-link"
+              href="https://github.com/AnaCelia1827"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg class="icon"><use href="#icon-github" /></svg>GitHub<svg
+                class="icon"
+              >
+                <use href="#icon-arrow" /></svg></a
+            ><a
+              class="glass social-link"
+              href="https://www.linkedin.com/in/ana-c%C3%A9lia-amaral/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg class="icon"><use href="#icon-linkedin" /></svg>LinkedIn<svg
+                class="icon"
+              >
+                <use href="#icon-arrow" /></svg
+            ></a>
+          </div>
+          <div class="footer-bottom">
             <span>Ana Célia Amaral · Portfólio</span
             ><a href="#inicio"
-              >Voltar ao topo
-              <svg class="icon small-icon top-arrow">
-                <use href="#icon-down" /></svg
+              >Voltar ao topo <svg class="icon"><use href="#icon-arrow" /></svg
             ></a>
           </div>
         </div>
+        <div class="contact-orb" aria-hidden="true"></div>
       </footer>
     </main>
-
-    <dialog
-      class="project-dialog"
-      id="project-dialog"
-      aria-labelledby="dialog-title"
-    >
-      <button class="dialog-close" aria-label="Fechar detalhes do projeto">
-        <svg class="icon"><use href="#icon-close" /></svg>
-      </button>
-      <div class="dialog-image project-image" id="dialog-image"></div>
-      <div class="dialog-body">
-        <span class="project-year" id="dialog-year"></span>
-        <h2 id="dialog-title"></h2>
-        <p id="dialog-description"></p>
-        <div class="dialog-actions">
-          <a
-            class="button repository-link"
-            id="dialog-repository"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Ver repositório
-            <svg class="icon"><use href="#icon-arrow" /></svg></a
-          ><a
-            class="dialog-contact"
-            href="mailto:anaceliaaugusta@gmail.com"
-            id="dialog-contact"
-            >Conversar sobre o projeto</a
-          >
-        </div>
-      </div>
-    </dialog>
   </body>
 </html>

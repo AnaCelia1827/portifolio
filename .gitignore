@@ -4,3 +4,6 @@ test-results/
 playwright-report/
 .DS_Store
 Thumbs.db
+.impeccable/review/
+.impeccable/mocks/
+.impeccable/questions/

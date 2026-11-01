@@ -1,49 +1,36 @@
-# Portfólio — Ana Célia
+﻿# Portfólio — Ana Célia
 
-Portfólio responsivo em HTML, CSS e JavaScript puro, baseado no [Figma original](https://www.figma.com/design/agGHXsc44J2MNHlsuX9s6g/Sem-t%C3%ADtulo?node-id=7-178).
+Portfólio responsivo em HTML, CSS e JavaScript puro, na branch `redesign/glass`. A identidade atual segue as referências Y2K fornecidas: céu azul com scanlines, botões verde-lima e rosa brilhantes, Instrument Serif itálica com contorno, Polaroid e janelas retrô. Poppins e Instrument Serif são locais. Fotos, logos e conteúdo do Figma original foram preservados; não houve nova geração de imagens.
 
-A identidade usa **Poppins** em todo o site, seguindo a fonte do menu da referência, com pesos regular, médio e seminegrito. As fotos e os logos vêm do Figma. A paleta combina azul-marinho, rosa e branco, com destaques em amarelo-limão, conforme a referência escolhida. Os cartões inclinados e o arquivo com abas incorporam as referências enviadas.
+## Executar
 
-## Como abrir
-
-Abra `index.html` no navegador. Não é necessário instalar dependências.
-
-Para usar um servidor local, com Node.js instalado:
+Abra `index.html` diretamente ou, com Node.js instalado:
 
 ```sh
 npm run dev
 ```
 
-O site estará em `http://localhost:4173`.
+Acesse `http://localhost:4173`. Se a porta estiver ocupada, o servidor tenta as próximas portas e informa o endereço no terminal. A variável `PORT` permite escolher outra porta.
+
+## Conteúdo e interações
+
+Sobre mim, projetos, habilidades, formação, comunidade e contato permanecem acessíveis por âncoras. Fibrac, Dono Agro / Agro App, GeoRisco Santo André, LDC, Banco Inter e Martenare ficam na seleção geral; Stark (Hack4Freedom Brasil 2026) e Ecoa (Youth Challenge Blockchain 2026) têm uma seção própria de projetos de hackathons em `#hackathons`, com demonstrações e repositórios. Formação reúne Inteli e Fundação Matias Machline; comunidade apresenta Inteli Blockchain, Code Club e GraceHopper.
+
+Projetos usam `details` nativo. O menu móvel fecha ao navegar, clicar fora ou pressionar Escape. A navegação destaca a seção visível e preserva endereços antigos de abas. Copiar e-mail aparece quando a Clipboard API está disponível em contexto seguro e anuncia o resultado.
+
+A colagem tem uma breve entrada e links recebem pequenos movimentos no hover. `prefers-reduced-motion` desativa animações, transições e rolagem suave. Sem JavaScript, conteúdo, âncoras, menu e detalhes continuam disponíveis. Há foco visível e atalho para pular ao conteúdo.
 
 ## Arquivos
 
-- `index.html`: conteúdo e estrutura semântica.
-- `styles.css`: identidade visual, fontes locais e layouts responsivos.
-- `script.js`: navegação acessível das abas e detalhes dos projetos.
-- `assets/`: imagens e SVGs exportados do Figma e fontes hospedadas localmente.
-- `server.mjs`: servidor local opcional, sem dependências.
+- `index.html`: estrutura semântica e conteúdo.
+- `styles.css`: identidade Y2K, fontes locais e responsividade.
+- `script.js`: menu, navegação, compatibilidade de âncoras e cópia de e-mail.
+- `assets/`: fotos, logos, SVGs e fontes com licenças incluídas.
+- `server.mjs`: servidor local sem dependências.
+- `PRODUCT.md`, `DESIGN.md` e `.impeccable/`: contexto, tokens e direção da superfície.
 
-## Comportamento
+O endereço do Fibrac foi mantido conforme fornecido; retornou 404 na verificação pública anterior e pode exigir acesso privado ou atualização.
 
-As abas aceitam clique, setas do teclado, Home e End. Os detalhes dos projetos abrem com foco contido e podem ser fechados por Escape, pelo botão ou clicando fora. Sem JavaScript, todas as pastas permanecem visíveis. O site respeita a preferência por movimento reduzido.
+## Verificação
 
-As abas ficam encaixadas em um único corpo de pasta, sem recortes sobrepostos. A troca de pasta anima a cor de fundo, a altura do conteúdo e a entrada do painel. Cliques rápidos interrompem a animação anterior sem deixar alturas fixas ou painéis sobrepostos.
-
-A aba da seção Sobre mim sobrepõe a base da polaroid, criando o efeito de foto saindo da pasta. A foto e o clipe entram juntos, com um movimento suave ao passar o mouse. As seções aparecem durante a rolagem e os cartões entram em sequência. As animações são desativadas com a preferência por movimento reduzido, inclusive quando ela muda com a página aberta.
-
-Os botões dos projetos apresentam detalhes, acesso aos repositórios e contato por e-mail. Fibrac e Cobasi Shelter preservam as fotografias do Figma. GeoRisco e Stark têm capas tipográficas e conteúdo baseado nos READMEs dos repositórios fornecidos. O LinkedIn foi identificado nos READMEs da equipe.
-
-O endereço de Fibrac foi mantido conforme enviado, embora tenha retornado 404 na verificação pública; ele pode exigir acesso ao repositório privado ou atualização do endereço.
-
-## Cores
-
-| Uso              | Cor       |
-| ---------------- | --------- |
-| Fundo principal  | `#FFFFFF` |
-| Superfície clara | `#F5F5F8` |
-| Azul-marinho     | `#0B0B5C` |
-| Rosa             | `#F34B9B` |
-| Amarelo-limão    | `#D7EB00` |
-
-As imagens foram baixadas dos endereços de exportação do Figma; nenhum link temporário é usado em tempo de execução. As fontes são distribuídas sob a licença SIL Open Font License, incluída em `assets/fonts/`.
+Âncoras, assets, sintaxe JavaScript e verificações isoladas de interação passaram. Revisão estática concluída com ajustes para habilidades em telas estreitas e menu sem JavaScript. Sem screenshots de QA ou aprovação visual: o navegador IAB estava indisponível, e a tentativa no Chrome foi interrompida porque a URL atual não pôde ser verificada.
