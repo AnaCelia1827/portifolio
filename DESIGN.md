@@ -137,7 +137,7 @@ O itálico da Instrument Serif dá fluidez a títulos, anotações e assinatura.
 
 Container central com largura máxima de (1120px) e largura inicial `calc(100% - 96px)`. Os recuos laterais diminuem nos breakpoints de (1100px), (800px), (580px) e (350px). Seções usam o espaçamento vertical documentado nos tokens.
 
-A abertura combina lettering central, retrato e janela de biografia em duas colunas. Até (580px), essa composição se empilha. Projetos formam duas colunas com pequenos deslocamentos e inclinações; no celular passam a uma coluna. Habilidades passam de quatro para duas colunas até (800px) e uma até (380px). Comunidade passa de três colunas para uma até (580px); formação se reorganiza mantendo logo, período e descrição relacionados.
+A abertura combina lettering central, retrato e janela de biografia em duas colunas. Até (580px), essa composição se empilha. Projetos formam duas colunas com pequenos deslocamentos e inclinações; no celular passam a uma coluna. Habilidades passam de quatro para duas colunas até (800px) e uma até (380px). Comunidade usa quatro pastas expansíveis em uma lista vertical, com espaçamento reduzido até 650px; formação se reorganiza mantendo logo, período e descrição relacionados.
 
 O cabeçalho usa menu expansível até (800px) com JavaScript. Sem JavaScript, os links permanecem visíveis em uma linha que pode quebrar. Não há dependência de abas para revelar seções.
 
@@ -169,7 +169,7 @@ Tags de projeto são pequenas cápsulas de fundo neutro, borda fina e Poppins. T
 
 ### Cards / Containers
 
-Projetos e biografia usam janelas de papel com barra de título em gradiente e controles decorativos. Projetos têm imagem ou capa tipográfica, descrição, tags, link ao repositório e `details` nativo. As barras dos quatro projetos variam entre azul, rosa, verde e lilás. Habilidades usam divisões superiores em uma faixa de papel; comunidade combina logos circulares e uma peça central verde com fita rosa.
+Projetos e biografia usam janelas de papel com barra de título em gradiente e controles decorativos. Projetos têm imagem ou capa tipográfica, descrição, tags, link ao repositório e `details` nativo. As barras dos projetos variam entre azul, rosa, verde e lilás. Habilidades usam divisões superiores em uma faixa de papel. Comunidade usa fundo de céu azul com scanlines, abas verde-lima, logos circulares e linhas brancas. Cada clube é um `details` nativo que revela seus cases; Banco Inter pertence ao Inteli Blockchain e Martenare à GraceHopper. Code Club e Inteli Júnior têm pastas vazias prontas para novos projetos.
 
 ### Navigation
 

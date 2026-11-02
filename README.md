@@ -34,3 +34,7 @@ O endereço do Fibrac foi mantido conforme fornecido; retornou 404 na verificaç
 ## Verificação
 
 Âncoras, assets, sintaxe JavaScript e verificações isoladas de interação passaram. Revisão estática concluída com ajustes para habilidades em telas estreitas e menu sem JavaScript. Sem screenshots de QA ou aprovação visual: o navegador IAB estava indisponível, e a tentativa no Chrome foi interrompida porque a URL atual não pôde ser verificada.
+
+## Pastas de clubes
+
+Na seção de comunidade, cada clube tem uma pasta expansível em azul e verde-lima, inspirada na referência NewJeans. Inteli Blockchain reúne Banco Inter; GraceHopper reúne Martenare. Code Club e Inteli Júnior têm pastas prontas para receber seus projetos. As pastas usam `details` e `summary`, funcionam por teclado e sem JavaScript. Para incluir um case, adicione um `article.club-case` no `div.club-folder-content` correspondente e atualize a contagem na aba e no rodapé. Links diretos para pastas e cases abrem a pasta correspondente automaticamente.

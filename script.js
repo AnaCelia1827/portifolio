@@ -37,6 +37,16 @@ function resolvePreviousSection() {
 }
 resolvePreviousSection();
 window.addEventListener("hashchange", resolvePreviousSection);
+
+// Links diretos para clubes ou cases abrem a pasta correspondente.
+function openClubFolderFromHash() {
+  const target = document.getElementById(location.hash.slice(1));
+  const clubFolder = target?.closest(".club-folder");
+  if (clubFolder) clubFolder.open = true;
+}
+openClubFolderFromHash();
+window.addEventListener("hashchange", openClubFolderFromHash);
+
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {

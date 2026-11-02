@@ -60,6 +60,13 @@
       </symbol>
       <symbol id="icon-spark" viewBox="0 0 64 64"><path d="M32 3 36 27 61 32 36 37 32 61 27 37 3 32 27 27Z"/></symbol>
       <symbol id="icon-flower" viewBox="0 0 64 64"><path d="M32 21C14-8 0 18 21 28-8 30 8 55 26 39 20 68 48 68 39 40 64 56 71 28 43 28 64 6 35-8 32 21Z"/><circle cx="32" cy="32" r="6"/></symbol>
+      <symbol id="icon-folder" viewBox="0 0 24 24">
+        <path d="M3 7V5a1 1 0 0 1 1-1h5l2 3h9a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7Z" />
+        <path d="M3 9h18" />
+      </symbol>
+      <symbol id="icon-play" viewBox="0 0 24 24">
+        <path d="m8 5 11 7-11 7Z" />
+      </symbol>
     </svg>
 
 
@@ -475,56 +482,80 @@
         id="comunidade"
         aria-labelledby="community-title"
       >
-        <div class="section-heading">
-          <h2 id="community-title">Melhor <em>em comunidade</em></h2>
-          <p>Porque crescer também<br />é construir junto.</p>
-        </div>
-        <div class="community-grid">
-          <article class="community-card glass">
-            <div class="club-logo blockchain-crop">
-              <img
-                src="assets/blockchain.png"
-                width="658"
-                height="625"
-                alt="Inteli Blockchain"
-                loading="lazy"
-              />
-            </div>
-            <h3>Inteli Blockchain</h3>
-            <p>Membro da comunidade de blockchain do Inteli.</p>
-          </article>
-          <article class="community-card glass">
-            <div class="club-logo codeclub-crop">
-              <img
-                src="assets/code-club.png"
-                width="557"
-                height="475"
-                alt="Code Club — Rio do Código"
-                loading="lazy"
-              />
-            </div>
-            <h3>Code Club</h3>
-            <p>
-              Incentiva o aprendizado em tecnologia e programação de jovens.
-            </p>
-          </article>
-          <article class="community-card glass">
-            <div class="club-logo grace-crop">
-              <img
-                src="assets/grace-hopper.png"
-                width="593"
-                height="522"
-                alt="GraceHopper"
-                loading="lazy"
-              />
-            </div>
-            <h3>GraceHopper</h3>
-            <p>
-              Apoio e fortalecimento da participação feminina na comunidade
-              tech.
-            </p>
-          </article>
-        </div>
+              <div class="panel-heading club-folders-heading">
+                <h2 id="community-title">Clubes <em>& projetos</em></h2>
+                <span>tecnologia faz mais sentido com pessoas.</span>
+              </div>
+              <p class="club-folders-intro">Abra uma pasta para explorar o que construí em cada comunidade.</p>
+              <div class="club-folders" aria-label="Pastas de projetos dos clubes">
+                <details class="club-folder" id="pasta-blockchain" name="club-project-folders" open>
+                  <summary>
+                    <span class="club-folder-tab"><svg class="icon" aria-hidden="true"><use href="#icon-folder" /></svg><span>1 projeto</span></span>
+                    <span class="club-folder-row">
+                      <span class="club-folder-avatar blockchain-crop"><img src="assets/blockchain.png" alt="" loading="lazy" width="64" height="64" /></span>
+                      <span class="club-folder-name"><strong>Inteli Blockchain</strong><span>Membro da comunidade de blockchain do Inteli.</span></span>
+                      <span class="club-folder-action"><span class="club-open-label">Abrir pasta</span><span class="club-close-label">Fechar pasta</span><svg class="icon" aria-hidden="true"><use href="#icon-down" /></svg></span>
+                    </span>
+                  </summary>
+                  <div class="club-folder-content">
+                  <article class="club-case" id="projeto-inter-clube">
+                    <div class="club-case-heading"><svg class="icon club-case-marker" aria-hidden="true"><use href="#icon-play" /></svg><h3>Banco Inter</h3><span class="club-case-status">Desenvolvimento de produto</span></div>
+                    <p class="club-case-description">Plataforma de operações interfinanceiras para profissionais de uma mesa DI/pernoite.</p>
+                    <p><strong>Minha contribuição:</strong> UX/UI, prototipação e front-end: definição de fluxos, wireframes e componentes para ofertas, posições e acompanhamento de operações.</p>
+                    <p><strong>Resultados e estágio:</strong> Fluxos, protótipos e estruturas de interface produzidos para apoiar as operações previstas.</p>
+                    <p class="club-case-stack"><strong>Ferramentas:</strong> Figma, React, Next.js, TypeScript, Node.js e integrações Web3.</p>
+                    <a class="club-case-contact" href="mailto:anaceliaaugusta@gmail.com?subject=Projeto%20Banco%20Inter">Conversar sobre o projeto <svg class="icon"><use href="#icon-arrow" /></svg></a>
+                  </article>
+                  </div>
+                </details>
+                <details class="club-folder" id="pasta-code-club" name="club-project-folders">
+                  <summary>
+                    <span class="club-folder-tab"><svg class="icon" aria-hidden="true"><use href="#icon-folder" /></svg><span>0 projetos</span></span>
+                    <span class="club-folder-row">
+                      <span class="club-folder-avatar codeclub-crop"><img src="assets/code-club.png" alt="" loading="lazy" width="64" height="64" /></span>
+                      <span class="club-folder-name"><strong>Code Club</strong><span>Aprendizado em tecnologia e programação para jovens.</span></span>
+                      <span class="club-folder-action"><span class="club-open-label">Abrir pasta</span><span class="club-close-label">Fechar pasta</span><svg class="icon" aria-hidden="true"><use href="#icon-down" /></svg></span>
+                    </span>
+                  </summary>
+                  <div class="club-folder-content">
+<p class="club-folder-empty">Os projetos deste clube serão reunidos aqui.</p>
+                  </div>
+                </details>
+                <details class="club-folder" id="pasta-grace-hopper" name="club-project-folders">
+                  <summary>
+                    <span class="club-folder-tab"><svg class="icon" aria-hidden="true"><use href="#icon-folder" /></svg><span>1 projeto</span></span>
+                    <span class="club-folder-row">
+                      <span class="club-folder-avatar grace-crop"><img src="assets/grace-hopper.png" alt="" loading="lazy" width="64" height="64" /></span>
+                      <span class="club-folder-name"><strong>GraceHopper</strong><span>Fortalecimento da participação feminina na comunidade tech.</span></span>
+                      <span class="club-folder-action"><span class="club-open-label">Abrir pasta</span><span class="club-close-label">Fechar pasta</span><svg class="icon" aria-hidden="true"><use href="#icon-down" /></svg></span>
+                    </span>
+                  </summary>
+                  <div class="club-folder-content">
+                  <article class="club-case" id="projeto-martenare-clube">
+                    <div class="club-case-heading"><svg class="icon club-case-marker" aria-hidden="true"><use href="#icon-play" /></svg><h3>Martenare</h3><span class="club-case-status">Em andamento</span></div>
+                    <p class="club-case-description">Engenharia de requisitos, modelagem de dados e desenvolvimento back-end.</p>
+                    <p><strong>Minha contribuição:</strong> Organização das funcionalidades, definição do modelo de persistência e transformação das necessidades do sistema em componentes técnicos.</p>
+                    <p><strong>Resultados e estágio:</strong> Projeto em desenvolvimento, com foco na estruturação de requisitos e organização da arquitetura de software.</p>
+
+                    <a class="club-case-contact" href="mailto:anaceliaaugusta@gmail.com?subject=Projeto%20Martenare">Conversar sobre o projeto <svg class="icon"><use href="#icon-arrow" /></svg></a>
+                  </article>
+                  </div>
+                </details>
+                <details class="club-folder" id="pasta-inteli-junior" name="club-project-folders">
+                  <summary>
+                    <span class="club-folder-tab"><svg class="icon" aria-hidden="true"><use href="#icon-folder" /></svg><span>0 projetos</span></span>
+                    <span class="club-folder-row">
+                      <span class="club-folder-avatar club-folder-initials" aria-hidden="true">IJ</span>
+                      <span class="club-folder-name"><strong>Inteli Júnior</strong><span>Pasta de projetos.</span></span>
+                      <span class="club-folder-action"><span class="club-open-label">Abrir pasta</span><span class="club-close-label">Fechar pasta</span><svg class="icon" aria-hidden="true"><use href="#icon-down" /></svg></span>
+                    </span>
+                  </summary>
+                  <div class="club-folder-content">
+<p class="club-folder-empty">Os projetos deste clube serão reunidos aqui.</p>
+                  </div>
+                </details>
+              </div>
+              <div class="club-folders-footer"><span>4 clubes · 2 projetos</span><span>crescer também é construir junto.</span></div>
       </section>      <footer class="contact" id="contato" aria-labelledby="contact-title">
         <div class="wrap contact-inner">
           <div class="contact-heading">

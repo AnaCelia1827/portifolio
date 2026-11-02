@@ -22,6 +22,7 @@ Visitantes interessados no trabalho de desenvolvimento de Ana Célia. Recrutador
 
 - Preservar os projetos e o conteúdo factual já fornecido: Fibrac, Dono Agro / Agro App, GeoRisco Santo André, LDC, Banco Inter, Martenare, Stark e Ecoa. Cobasi Shelter foi removido a pedido da usuária. Stark e Ecoa devem aparecer como projetos de hackathons, em uma seção própria.
 - Apresentar formação acadêmica e clubes/voluntariado em seções independentes e diretamente acessíveis.
+- Organizar clubes em pastas expansíveis: Banco Inter no Inteli Blockchain e Martenare na GraceHopper; incluir Code Club e Inteli Júnior, com espaço para futuros projetos.
 - Manter navegação por teclado, responsividade, funcionamento básico sem JavaScript e respeito a movimento reduzido.
 - Criar a reformulação na branch `redesign/glass`, mantendo a versão anterior em `main`.
 - Commits em português, com a autoria configurada da usuária, sem coautoria do Codex.
