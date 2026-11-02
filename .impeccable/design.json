@@ -1,181 +1,152 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-01T22:55:28.383Z",
-  "title": "Design System: Portfólio — Ana Célia Amaral",
+  "generatedAt": "2026-11-02T12:23:11.777879+00:00",
+  "title": "Ana Célia — Arquivo pessoal",
   "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "value": "#313738"
+      },
+      "muted": {
+        "role": "neutral",
+        "value": "#646a6a"
+      },
+      "paper": {
+        "role": "neutral",
+        "value": "#f9f7f1"
+      },
+      "desk": {
+        "role": "neutral",
+        "value": "#f2eee9"
+      },
+      "blue": {
+        "role": "accent",
+        "value": "#b4d1d9"
+      },
+      "blue-dark": {
+        "role": "accent",
+        "value": "#44646f"
+      },
+      "pink": {
+        "role": "accent",
+        "value": "#e8bdcf"
+      },
+      "pink-light": {
+        "role": "accent",
+        "value": "#f7e4ec"
+      },
+      "line": {
+        "role": "accent",
+        "value": "#c7c7c0"
+      }
+    },
     "typographyMeta": {
+      "signature": {
+        "fontFamily": "Pinyon",
+        "style": "caligrafia"
+      },
       "display": {
-        "displayName": "Instrument Serif",
-        "purpose": "Lettering principal itálico com contorno; alias CSS Instrument."
+        "fontFamily": "Instrument"
       },
       "body": {
-        "displayName": "Poppins",
-        "purpose": "Descrições, menus e controles; fonte local."
+        "fontFamily": "Poppins"
+      },
+      "case": {
+        "fontSize": "13px",
+        "lineHeight": 1.95,
+        "desktopLineHeight": 1.8
       }
     },
-    "shadows": [
-      {
-        "name": "gloss-button",
-        "value": "2px 4px 7px #455c4f2e,inset 0 1px 1px white",
-        "purpose": "Relevo do CTA verde."
-      },
-      {
-        "name": "polaroid",
-        "value": "5px 9px 12px #4b658d25",
-        "purpose": "Papel do retrato."
-      },
-      {
-        "name": "bio-window",
-        "value": "5px 8px 16px #536b8425",
-        "purpose": "Janela de biografia."
-      },
-      {
-        "name": "project-card",
-        "value": "4px 6px 12px #536b8420",
-        "purpose": "Janelas de projeto."
-      }
-    ],
-    "motion": [
-      {
-        "name": "ease",
-        "value": "cubic-bezier(.16,1,.3,1)",
-        "purpose": "Entrada da colagem e hover do CTA."
-      },
-      {
-        "name": "collage-arrive",
-        "value": ".9s; blur(3px) → blur(0); translate:0 12px → 0 0",
-        "purpose": "Somente prefers-reduced-motion:no-preference."
-      },
-      {
-        "name": "hover",
-        "value": ".2s / .25s; translateY(-3px)",
-        "purpose": "Pequenos deslocamentos de controles."
-      },
-      {
-        "name": "reduced-motion",
-        "value": "animation:none!important;transition:none!important;scroll-behavior:auto",
-        "purpose": "Aplicado via media query, inclusive mudanças da preferência."
-      }
-    ],
-    "breakpoints": [
-      {
-        "name": "wide",
-        "value": "1500px"
-      },
-      {
-        "name": "desktop",
-        "value": "1100px"
-      },
-      {
-        "name": "tablet",
-        "value": "800px"
-      },
-      {
-        "name": "mobile",
-        "value": "580px"
-      },
-      {
-        "name": "single-skill",
-        "value": "380px"
-      },
-      {
-        "name": "narrow",
-        "value": "350px"
-      }
-    ],
-    "focus": {
-      "selector": "a:focus-visible,button:focus-visible,summary:focus-visible",
-      "outline": "3px solid #7f3161",
-      "outlineOffset": "6px"
+    "shadows": {
+      "paper": "4px 9px 18px #6b6b6412",
+      "cover": "7px 5px 3px #dcded4, 12px 9px 18px #425c692b"
     },
-    "effects": {
-      "canvas": "radial-gradient(ellipse 34% 12% at 16% 7%,#ffffffd9,transparent),radial-gradient(ellipse 29% 9% at 86% 18%,#ffffffc9,transparent),repeating-linear-gradient(0deg,transparent 0 3px,#fff2 3px 4px)",
-      "letteringStroke": "1.3px #374a44",
-      "letteringShadow": "1px 2px 0 #a2b0ad,3px 4px 0 #fafefd,5px 6px 0 #526363,6px 8px 8px #263d3c35",
-      "portraitRotation": "-6deg; mobile -5deg"
+    "motion": {
+      "ease": "cubic-bezier(.16,1,.3,1)",
+      "opening": "shared spine, rotateY(-180deg), 850ms; no opacity transition; ribbon reverses opening",
+      "background": "9 dotted SVG stars, 25-35s alternate; respects reduced motion and previously saved pause preference; no visual control",
+      "page": "440ms perspective fade, cancelled before replacement",
+      "tin": "scroll progress rotates the same image lid -180deg to 0 around hinge at 48.5%; reverse scroll closes; reduced motion and keyboard focus keep open"
     },
-    "review": {
-      "verdict": "ship within static scope",
-      "visualApproval": false,
-      "screenshots": [],
-      "limitation": "Host IAB indisponível; ação no Chrome interrompida porque a URL atual não pôde ser verificada."
+    "breakpoints": {
+      "compact": "1050px",
+      "stacked": "800px",
+      "singleBookPage": "760px",
+      "phone": "500px",
+      "smallPhone": "350px"
+    },
+    "notebook": {
+      "closed": "blue cover, heart outline, tabs, ribbon",
+      "open": "white leaves; index only on left; project photo, status and short description on right; learn-more link to standalone HTML page",
+      "layout": "intrinsic summary height; complete text preserved in six pages under projetos/; no internal scrolling",
+      "smallScreens": "show-index toggles the index and case without duplicating content",
+      "desktop": "section up to 900px; actual book around 868 by 469px; centered rectangular object"
+    },
+    "assets": {
+      "tin": "assets/stacks-tin-open.png",
+      "tinPrompt": "assets/stacks-tin-open.prompt.txt",
+      "stars": [
+        "assets/star-dots.svg",
+        "assets/star-dots-outline.svg"
+      ],
+      "bookHeart": "assets/heart-dots.svg"
+    },
+    "focus": "3px #63516a; light outline on dark prints and notebook",
+    "badge": {
+      "placement": "same right-hand hero position as prior ID card",
+      "material": "vertical transparent molded holder, metal clasp, ring, chains, silver heart and star charms",
+      "content": "existing photo, name, course, institution, interests and signature; decorative barcode",
+      "interaction": "native button flips 180 degrees; pointer tilt; finite pendulum sway on click; reduced amplitude on phones",
+      "depth": "CSS perspective, preserve-3d, separated front and back planes; accessible hit target above both faces",
+      "accessibility": "native Enter/Space activation, current-face aria-hidden/inert, reduced-motion static face change, readable front without JavaScript",
+      "files": [
+        "badge.css",
+        "badge.js"
+      ]
+    },
+    "community": {
+      "entry": "illustrated sage folder with real club logos",
+      "interaction": "native details/summary reveals four existing club folders; deep links open both levels",
+      "motion": "paper fan and front flap; reduced-motion alternative"
+    },
+    "projectPages": {
+      "stylesheet": "project.css",
+      "content": "all existing paragraphs preserved; project-specific stack and supplied repository links",
+      "missingData": "photo placeholders except Fibrac; explicit absent repository notices; no invented Martenare stack",
+      "navigation": "back to original book chapter and previous/next standalone pages"
     }
   },
   "components": [
     {
-      "name": "CTA verde",
+      "name": "Capa do caderno",
       "kind": "button",
-      "refersTo": "button-primary",
-      "description": "Link principal para projetos.",
-      "html": "<a class=\"ds-gloss\" href=\"#projetos\">Explore meus projetos ↓</a>",
-      "css": ".ds-gloss{display:inline-flex;gap:24px;padding:10px 23px;border:1px solid #61765c;border-radius:30px;background:linear-gradient(#faffef,#c4f28a 49%,#a8e570 51%,#daffac);color:var(--ink,#27352d);font:12px Poppins,sans-serif;text-decoration:none;box-shadow:2px 4px 7px #455c4f2e,inset 0 1px 1px white;transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .25s}.ds-gloss:hover{transform:translateY(-3px);box-shadow:2px 7px 9px #455c4f35}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #7f3161;outline-offset:6px}"
+      "description": "Capa azul com coração e abas, controlando o livro real.",
+      "html": "<button class=\"book-cover\" aria-expanded=\"false\" aria-controls=\"book-interior\">Abrir caderno</button>",
+      "css": ".book-cover{background:#a2c4cf;transform-origin:left center}.is-open .book-cover{transform:rotateY(-176deg);opacity:0}"
     },
     {
-      "name": "Link social rosa",
+      "name": "Página de projeto",
+      "kind": "article",
+      "description": "Texto completo com altura intrínseca.",
+      "html": "<article class=\"project-sheet\"><h3>Projeto</h3><div class=\"case-content\">Conteúdo factual completo.</div></article>",
+      "css": ".project-sheet{height:auto;max-height:none;overflow:visible}.case-content{font-size:13px;line-height:1.95}"
+    },
+    {
+      "name": "Adesivo de stack",
       "kind": "button",
-      "refersTo": "button-social",
-      "description": "Ações sociais da área de contato.",
-      "html": "<a class=\"ds-social\" href=\"https://github.com/AnaCelia1827\">GitHub ↗</a>",
-      "css": ".ds-social{display:inline-flex;gap:14px;padding:8px 20px;border:1px solid #98546e;border-radius:12px;background:linear-gradient(#fff0fa,#f4a4ce 48%,#e68bbb 53%,#f8c4e1);color:var(--ink,#27352d);font:12px Poppins,sans-serif;text-decoration:none;box-shadow:2px 4px 6px #516d3626;transition:transform .2s}.ds-social:hover{transform:translateY(-3px)}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #7f3161;outline-offset:6px}"
-    },
-    {
-      "name": "Navegação",
-      "kind": "nav",
-      "description": "Links compactos com sublinhado de estado.",
-      "html": "<nav class=\"ds-nav\"><a href=\"#projetos\" aria-current=\"location\">Projetos</a><a href=\"#formacao\">Formação</a></nav>",
-      "css": ".ds-nav{display:flex;gap:24px;font:11px Poppins,sans-serif;color:var(--ink,#27352d)}.ds-nav a{position:relative;color:inherit;text-decoration:none}.ds-nav a:after{content:'';position:absolute;left:0;right:0;bottom:-4px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .2s}.ds-nav a:hover:after,.ds-nav a[aria-current]:after{transform:scaleX(1)}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #7f3161;outline-offset:6px}"
-    },
-    {
-      "name": "Tag de projeto",
-      "kind": "chip",
-      "refersTo": "project-tag",
-      "description": "Metadado informativo, sem interação.",
-      "html": "<span class=\"ds-tag\">Sustentabilidade</span>",
-      "css": ".ds-tag{display:inline-block;font:11px/1.8 Poppins,sans-serif;color:var(--ink,#27352d);padding:2px 10px;border:1px solid #a4ab99;border-radius:12px;background:#eff3e9}"
-    },
-    {
-      "name": "Janela de projeto",
-      "kind": "card",
-      "refersTo": "project-card",
-      "description": "Papel, barra retrô e detalhes expansíveis nativos.",
-      "html": "<article class=\"ds-card\"><div class=\"ds-bar\">fibrac.projeto <span aria-hidden=\"true\">― □ ×</span></div><div class=\"ds-content\"><h3>Fibrac</h3><p>Tecnologia e sustentabilidade.</p><details><summary>Sobre o projeto</summary><p>Produção de azulejos à base de fibra de coco.</p></details></div></article>",
-      "css": ".ds-card{border:1px solid #637471;background:var(--paper,#fffef6);color:var(--ink,#27352d);box-shadow:4px 6px 12px #536b8420;font:14px/1.8 Poppins,sans-serif}.ds-bar{display:flex;justify-content:space-between;gap:12px;padding:8px 12px;background:linear-gradient(#e3f3ff,#badbf3);border-bottom:1px solid #6b868a;font-size:11px;letter-spacing:.04em}.ds-content{padding:23px 25px 12px}.ds-content h3{font:400 37px/1.06 Instrument,serif;letter-spacing:-.015em;margin:0}.ds-content details{border-top:1px dashed #a2aba4;margin-top:20px}.ds-content summary{padding:14px 0;font-size:11px;cursor:pointer}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #7f3161;outline-offset:6px}"
+      "description": "12 self-hosted SVG technology logos, with context and documented related projects.",
+      "html": "<button class=\"stack-token\" aria-label=\"Explorar Python\"><img src=\"assets/tech/python.svg\" alt=\"\"/><strong>Python</strong></button>",
+      "css": ".stack-token>img{background:#faf7f7;border:1px solid #d5d0cf;border-radius:11px;padding:8px}.stack-token[aria-pressed=true]{transform:translateY(-4px) rotate(-4deg) scale(1.08)}"
     }
   ],
   "narrative": {
-    "northStar": "Scrapbook digital Y2K",
-    "overview": "Um portfólio pessoal que combina céu azul com scanlines, recortes de papel, janelas de navegador retrô e pequenos objetos brilhantes. As referências enviadas pela usuária definem esse mundo: lettering serifado itálico com contorno, verde-lima e rosa, retrato em Polaroid e stickers.\n\nA expressividade fica nas molduras e na tipografia; o conteúdo continua factual e legível em português brasileiro. Fotografias e logos existentes sustentam a identidade pessoal. A implementação foi feita diretamente em HTML, CSS e JavaScript, sem nova imagem gerada.",
-    "keyCharacteristics": [
-      "Céu com linhas horizontais sutis e luz difusa.",
-      "Instrument Serif expressiva com corpo Poppins local.",
-      "Janelas de papel, Polaroid inclinada e stickers brilhantes.",
-      "Ações verde-lima e rosa com relevo e bordas finas.",
-      "Página contínua, com projetos e trajetória acessíveis por âncoras."
-    ],
-    "rules": [
-      {
-        "name": "The Material Color Rule",
-        "body": "A cor participa do objeto: brilho no botão, papel no painel e céu no fundo. Preserve a leitura do texto sobre cada material.",
-        "section": "colors"
-      },
-      {
-        "name": "The Two Voices Rule",
-        "body": "Use a serif expressiva para identidade e títulos; preserve Poppins para informação e controles.",
-        "section": "typography"
-      }
-    ],
-    "dos": [
-      "Do preservar fotografias, logos e conteúdo factual fornecidos.",
-      "Do combinar títulos Instrument Serif e informação em Poppins local.",
-      "Do manter links, detalhes e seções utilizáveis sem JavaScript.",
-      "Do respeitar movimento reduzido e foco visível em todos os controles.",
-      "Do extrair novas decisões do código e das referências explícitas da usuária."
-    ],
-    "donts": [
-      "Don't restaurar a direção glass anterior ou a regra antiga de Poppins em todo o site.",
-      "Don't substituir o retrato e os projetos reais por imagens geradas.",
-      "Don't dar comportamento de botão aos controles decorativos de janela.",
-      "Don't registrar a revisão estática como aprovação visual em navegador."
+    "world": "Romantic scrapbook objects",
+    "review": "Local static and DOM checks; no browser rendering verified",
+    "constraints": [
+      "Preserve all 8 real projects: 6 book chapters, Stark and Ecoa exclusively in expandable hackathon cards",
+      "No fixed page height or nested page scroll",
+      "Respect reduced motion and user background pause"
     ]
   }
 }

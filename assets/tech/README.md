@@ -1,0 +1,1 @@
+Technology logos from [Devicon](https://github.com/devicons/devicon), downloaded 2026-11-02. Original SVGs, self-hosted; see LICENSE-devicon.txt. Trademarks belong to their respective owners. SQL is a generic database pictogram authored for this portfolio.

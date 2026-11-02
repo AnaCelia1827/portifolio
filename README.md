@@ -1,40 +1,31 @@
-﻿# Portfólio — Ana Célia
+# Portfólio — Ana Célia
 
-Portfólio responsivo em HTML, CSS e JavaScript puro, na branch `redesign/glass`. A identidade atual segue as referências Y2K fornecidas: céu azul com scanlines, botões verde-lima e rosa brilhantes, Instrument Serif itálica com contorno, Polaroid e janelas retrô. Poppins e Instrument Serif são locais. Fotos, logos e conteúdo do Figma original foram preservados; não houve nova geração de imagens.
+Portfólio em HTML, CSS e JavaScript puro na branch `feat/nova-ver`. A identidade atual segue as referências de scrapbook: papel creme, azul suave, rosa, estrelas pontilhadas em movimento, fichas de arquivo e objetos interativos.
 
 ## Executar
 
-Abra `index.html` diretamente ou, com Node.js instalado:
+Com Node.js instalado, execute `npm run dev` e acesse `http://localhost:4173`. Não é necessário instalar dependências. O servidor tenta outra porta se a padrão estiver ocupada. Também é possível abrir `index.html` diretamente.
 
-```sh
-npm run dev
-```
+## Interações
 
-Acesse `http://localhost:4173`. Se a porta estiver ocupada, o servidor tenta as próximas portas e informa o endereço no terminal. A variável `PORT` permite escolher outra porta.
+- Caderno compacto e retangular, com abertura 3D pela capa e fechamento pela fita. Os seis capítulos mostram resumo e foto na mesma folha, com filtros, favoritos e link “Conhecer o projeto”. Os textos completos, stacks e repositórios informados ficam em páginas HTML próprias dentro de projetos/. Sem barra externa de controles; no celular, o retorno ao índice fica dentro da folha.
+- A altura das páginas acompanha o conteúdo. Sem recorte, largura mínima forçada ou rolagem dentro das folhas. No celular, o botão Índice alterna entre lista e case; a rolagem vertical é a do site.
+- Latinha prateada com tampa 3D que abre com o scroll e fecha ao voltar, sem prender a rolagem. Com movimento reduzido, foco de teclado ou sem JavaScript, permanece aberta. Doze logos clicáveis, ficha de contexto e links para páginas completas dos projetos quando documentados. Logos SVG do Devicon hospedados em assets/tech/, com licença; SQL usa um pictograma genérico de banco de dados.
+- Fundo com SVGs pontilhados em movimento, sem controle visual de movimento; `prefers-reduced-motion` desativa os efeitos e preferências de pausa anteriormente salvas continuam respeitadas.
+- Crachá 3D com foto real e informações pessoais no hero, dentro de um porta-cartão transparente vertical com argola, correntes e pingentes metálicos em SVG. Clique, toque, Enter ou Espaço viram a peça; o mouse inclina e o clique provoca um balanço breve. Movimento reduzido troca a face sem giro; sem JavaScript, a frente continua legível. Estilos e interação isolados em badge.css e badge.js.
+- Cartões expansíveis de Stark e Ecoa exclusivamente em hackathons, com texto completo, demonstrações e repositórios. A aba do caderno leva até essa seção. Uma pasta ilustrada expande os quatro clubes: Banco Inter no Inteli Blockchain; Martenare na GraceHopper; Code Club e Inteli Júnior sem cases associados ainda.
+- Formação e contatos preservados; cópia de e-mail com anúncio de resultado.
 
-## Conteúdo e interações
+Sem JavaScript, o caderno mostra os resumos em fluxo normal e os links abrem as páginas completas. Com JavaScript, um capítulo fica visível por vez e a navegação abre o livro automaticamente. Favoritos continuam funcionando durante a visita se o armazenamento local estiver bloqueado. As páginas de detalhes são estáticas e não dependem de JavaScript.
 
-Sobre mim, projetos, habilidades, formação, comunidade e contato permanecem acessíveis por âncoras. Fibrac, Dono Agro / Agro App, GeoRisco Santo André, LDC, Banco Inter e Martenare ficam na seleção geral; Stark (Hack4Freedom Brasil 2026) e Ecoa (Youth Challenge Blockchain 2026) têm uma seção própria de projetos de hackathons em `#hackathons`, com demonstrações e repositórios. Formação reúne Inteli e Fundação Matias Machline; comunidade apresenta Inteli Blockchain, Code Club e GraceHopper.
+## Arquivos e imagens
 
-Projetos usam `details` nativo. O menu móvel fecha ao navegar, clicar fora ou pressionar Escape. A navegação destaca a seção visível e preserva endereços antigos de abas. Copiar e-mail aparece quando a Clipboard API está disponível em contexto seguro e anuncia o resultado.
+index.html, styles.css e script.js contêm a página principal. Os seis arquivos em projetos/ usam styles.css e project.css e preservam os textos completos. As fontes e licenças estão em assets/fonts/. Fotos, logos e clipe vêm dos assets existentes. assets/stacks-tin-open.png foi gerado com ImageGen, com transparência real; seu prompt está no arquivo adjacente e nos metadados do PNG. A animação usa duas regiões da mesma imagem, sem gerar outra latinha. O caderno é construído em HTML/CSS/SVG. project-book-open.png permanece como referência histórica sem uso.
 
-A colagem tem uma breve entrada e links recebem pequenos movimentos no hover. `prefers-reduced-motion` desativa animações, transições e rolagem suave. Sem JavaScript, conteúdo, âncoras, menu e detalhes continuam disponíveis. Há foco visível e atalho para pular ao conteúdo.
-
-## Arquivos
-
-- `index.html`: estrutura semântica e conteúdo.
-- `styles.css`: identidade Y2K, fontes locais e responsividade.
-- `script.js`: menu, navegação, compatibilidade de âncoras e cópia de e-mail.
-- `assets/`: fotos, logos, SVGs e fontes com licenças incluídas.
-- `server.mjs`: servidor local sem dependências.
-- `PRODUCT.md`, `DESIGN.md` e `.impeccable/`: contexto, tokens e direção da superfície.
-
-O endereço do Fibrac foi mantido conforme fornecido; retornou 404 na verificação pública anterior e pode exigir acesso privado ou atualização.
+`DESIGN.md`, `PRODUCT.md` e `.impeccable/` documentam conteúdo, identidade e decisões.
 
 ## Verificação
 
-Âncoras, assets, sintaxe JavaScript e verificações isoladas de interação passaram. Revisão estática concluída com ajustes para habilidades em telas estreitas e menu sem JavaScript. Sem screenshots de QA ou aprovação visual: o navegador IAB estava indisponível, e a tentativa no Chrome foi interrompida porque a URL atual não pôde ser verificada.
+Checagens de IDs, assets locais e sintaxe JavaScript. A revisão do livro compacto e da latinha usou Chromium headless em 1440, 390 e 320px: seis resumos, foto na folha do projeto, links para seis páginas completas, retorno ao livro, scroll de abertura/fechamento e movimento reduzido. Todos os parágrafos originais foram conferidos nas páginas de detalhes. Teclado e navegação sem JavaScript também foram verificados. Screenshots de desktop e celular inspecionados; sem overflow horizontal ou erros JavaScript nesses cenários.
 
-## Pastas de clubes
-
-Na seção de comunidade, cada clube tem uma pasta expansível em azul e verde-lima, inspirada na referência NewJeans. Inteli Blockchain reúne Banco Inter; GraceHopper reúne Martenare. Code Club e Inteli Júnior têm pastas prontas para receber seus projetos. As pastas usam `details` e `summary`, funcionam por teclado e sem JavaScript. Para incluir um case, adicione um `article.club-case` no `div.club-folder-content` correspondente e atualize a contagem na aba e no rodapé. Links diretos para pastas e cases abrem a pasta correspondente automaticamente.
+O host de acesso ao navegador está indisponível; não houve screenshots nem aprovação visual da renderização final. A revisão independente da etapa de objetos foi interrompida por limite da ferramenta; as verificações finais foram concluídas localmente.
